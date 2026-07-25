@@ -18,6 +18,10 @@
 
 * { box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -190,11 +194,61 @@ body {
   min-height: 44px;
   padding: 10px 16px;
   font-size: 15px;
+  transition: background-color 0.15s, border-color 0.15s, transform 0.05s;
+}
+
+.flashcard-controls button:hover,
+.calculator-form button:hover,
+.quiz-choice:not(:disabled):hover {
+  border-color: var(--selected-border);
+  background: var(--selected-bg);
+}
+
+.flashcard-controls button:active,
+.calculator-form button:active,
+.quiz-choice:not(:disabled):active {
+  transform: scale(0.98);
 }
 
 .flashcard {
   min-height: 120px;
   font-size: 17px;
+  transition: background-color 0.15s;
+}
+
+.flashcard:hover {
+  background: var(--selected-bg);
+}
+
+.flashcard-hint {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.quiz-filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.quiz-wrong-badge {
+  display: inline-block;
+  background: var(--incorrect-bg);
+  color: var(--incorrect-text);
+  border: 1px solid var(--incorrect-border);
+  border-radius: 12px;
+  font-size: 12px;
+  padding: 2px 10px;
+  margin-bottom: 8px;
+}
+
+.wrong-book-group {
+  margin-top: 28px;
 }
 
 .topic-nav a {

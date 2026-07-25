@@ -8,6 +8,8 @@ import {
   isFlashcardMastered,
   recordAttempt,
   computeAccuracy,
+  getIncorrectCount,
+  isCurrentlyWrong,
 } from "../js/progress.js";
 
 test("createEmptyProgress returns empty maps", () => {
@@ -61,4 +63,22 @@ test("computeAccuracy ignores questions never attempted", () => {
   let state = createEmptyProgress();
   state = recordAttempt(state, "tvm-001", true, 100);
   assert.equal(computeAccuracy(state, ["tvm-001", "tvm-002", "tvm-003"]), 100);
+});
+
+test("getIncorrectCount counts only incorrect attempts", () => {
+  let state = createEmptyProgress();
+  assert.equal(getIncorrectCount(state, "tvm-001"), 0);
+  state = recordAttempt(state, "tvm-001", false, 100);
+  state = recordAttempt(state, "tvm-001", true, 200);
+  state = recordAttempt(state, "tvm-001", false, 300);
+  assert.equal(getIncorrectCount(state, "tvm-001"), 2);
+});
+
+test("isCurrentlyWrong reflects only the latest attempt", () => {
+  let state = createEmptyProgress();
+  assert.equal(isCurrentlyWrong(state, "tvm-001"), false);
+  state = recordAttempt(state, "tvm-001", false, 100);
+  assert.equal(isCurrentlyWrong(state, "tvm-001"), true);
+  state = recordAttempt(state, "tvm-001", true, 200);
+  assert.equal(isCurrentlyWrong(state, "tvm-001"), false);
 });

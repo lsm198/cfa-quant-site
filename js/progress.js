@@ -49,3 +49,14 @@ export function computeAccuracy(state, questionIds) {
   if (total === 0) return null;
   return Math.round((correctCount / total) * 100);
 }
+
+export function getIncorrectCount(state, questionId) {
+  const attempts = (state.questions[questionId] && state.questions[questionId].attempts) || [];
+  return attempts.filter((a) => !a.correct).length;
+}
+
+export function isCurrentlyWrong(state, questionId) {
+  const attempts = (state.questions[questionId] && state.questions[questionId].attempts) || [];
+  if (attempts.length === 0) return false;
+  return !attempts[attempts.length - 1].correct;
+}

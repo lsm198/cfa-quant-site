@@ -67,6 +67,11 @@ export function renderFlashcards(container, flashcards, topicId) {
     });
     container.appendChild(cardEl);
 
+    const hint = document.createElement("p");
+    hint.className = "flashcard-hint";
+    hint.textContent = "点击卡片查看背面";
+    container.appendChild(hint);
+
     const controls = document.createElement("div");
     controls.className = "flashcard-controls";
 

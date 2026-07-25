@@ -1,5 +1,5 @@
 import { loadProgress, saveProgress } from "./app.js";
-import { recordAttempt, computeAccuracy } from "./progress.js";
+import { recordAttempt, computeAccuracy, getIncorrectCount, isCurrentlyWrong } from "./progress.js";
 
 export function renderQuiz(container, questions, topicId) {
   if (!questions || questions.length === 0) {
@@ -11,6 +11,7 @@ export function renderQuiz(container, questions, topicId) {
   }
 
   let state = loadProgress();
+  let showOnlyWrong = false;
 
   function idFor(i) {
     return questions[i].id || `${topicId}-q-${i}`;
@@ -24,13 +25,31 @@ export function renderQuiz(container, questions, topicId) {
 
   const accuracyEl = document.createElement("p");
   accuracyEl.className = "quiz-accuracy";
-  accuracyEl.textContent = accuracyLabel();
   container.appendChild(accuracyEl);
 
-  questions.forEach((question, i) => {
+  const toggleLabel = document.createElement("label");
+  toggleLabel.className = "quiz-filter-toggle";
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  toggleLabel.appendChild(checkbox);
+  toggleLabel.appendChild(document.createTextNode(" 只看错题"));
+  container.appendChild(toggleLabel);
+
+  const listEl = document.createElement("div");
+  container.appendChild(listEl);
+
+  function renderQuestion(question, i) {
     const qId = idFor(i);
     const qEl = document.createElement("div");
     qEl.className = "quiz-question";
+
+    const wrongCount = getIncorrectCount(state, qId);
+    if (wrongCount > 0) {
+      const badge = document.createElement("span");
+      badge.className = "quiz-wrong-badge";
+      badge.textContent = `已错 ${wrongCount} 次`;
+      qEl.appendChild(badge);
+    }
 
     const stem = document.createElement("p");
     stem.textContent = question.stem_en;
@@ -70,6 +89,33 @@ export function renderQuiz(container, questions, topicId) {
 
     qEl.appendChild(choicesEl);
     qEl.appendChild(explanation);
-    container.appendChild(qEl);
+    return qEl;
+  }
+
+  function render() {
+    accuracyEl.textContent = accuracyLabel();
+    listEl.innerHTML = "";
+    const visible = questions
+      .map((q, i) => ({ q, i }))
+      .filter(({ i }) => !showOnlyWrong || isCurrentlyWrong(state, idFor(i)));
+
+    if (visible.length === 0) {
+      const done = document.createElement("p");
+      done.className = "section-label";
+      done.textContent = showOnlyWrong ? "没有错题,继续保持" : "暂无练习题";
+      listEl.appendChild(done);
+      return;
+    }
+
+    for (const { q, i } of visible) {
+      listEl.appendChild(renderQuestion(q, i));
+    }
+  }
+
+  checkbox.addEventListener("change", () => {
+    showOnlyWrong = checkbox.checked;
+    render();
   });
+
+  render();
 }
