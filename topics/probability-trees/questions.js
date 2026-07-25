@@ -76,5 +76,18 @@ window.TOPIC_QUESTIONS = [
     "explanation_en": "Correct because the expected value E(X) = 3,-,\"PUX)X; = (0.20 = 35) + (0.50 = 30) + (0.50 x 60) = 62. The\nvariance o*(X) = EX — E(X)|*} = 三 AP -EC = 0.20 x (35 — 62)* + 0.30 x (50 —62}¢ + 0.50 x\n(80 — 62)}* = 351. Standard deviation is the positive square root of variance: o = 351\" = 18.73.",
     "los": "calculate expected values, variances, and standard deviations and demonstrate their application to investment problems",
     "explanation_zh": ""
+  },
+  {
+    "id": "imported-053",
+    "stem_en": "A tree diagram contains the following information about the dividend per share  payable by a company under two scenarios:  Scenario  Probability of  Scenario  Dividend  per Share  Probability of  Dividend  Favorable  0.60  $2.00  0.80      $1.50  0.20  Unfavorable  0.40  $0.75  0.30      $0.50  0.70  The expected dividend per share under the favorable scenario is closest to:",
+    "choices_en": [
+      "A. $1.14.",
+      "B. $1.37.",
+      "C. $1.90."
+    ],
+    "answer": "C",
+    "explanation_en": "Correct because the expected value of a random variable X given an event or scenario S is denoted E(x’ | S).\nSuppose the random variable X can take on any one of n distinct outcomes X,, Xs, ..., x, (these outcomes form\na set of mutually exclusive and exhaustive events). [he expected value of X conditional on S$ ts the first\noutcome, X,, times the probability of the first outcome given 5, P(X, | S), plus the second outcome, x3, times the\nprobability of the second outcome given S, P(X, | S$), and so forth. In our case, S = Favorable scenario, X, =\nDividend of $2.50, X> = Dividend of $1.50, PR | S) = 0.80, and P(X, | S) = 0.20. Thus, the expected dividend\ngiven the favorable scenario = (0.80 x $2.00) + (0.20 x $1.50) = $1.90.",
+    "los": "formulate an investment problem as a probability tree and explain the use of conditional expectations in investment application",
+    "explanation_zh": ""
   }
 ];

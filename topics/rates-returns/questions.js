@@ -221,7 +221,7 @@ window.TOPIC_QUESTIONS = [
     "explanation_zh": ""
   },
   {
-    "id": "imported-089",
+    "id": "imported-091",
     "stem_en": "If a client controls the timing of cash flows into and out of a portfolio, which of  the following is most appropriate when evaluating the performance of the  portfolio manager?",
     "choices_en": [
       "A. Time-weighted rate of return.",

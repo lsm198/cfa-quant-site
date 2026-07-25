@@ -57,6 +57,19 @@ Alternative Investments
   assert.equal(solutions[1].answer, "A");
 });
 
+test("parseSolutions recognizes the terser \"Correct.\" phrasing (no \"because\") seen in some real blocks", () => {
+  const text = `Solution -1-
+A. Correct. A negatively skewed distribution appears as if the left tail has been pulled away from the mean.
+B. Incorrect. Kurtosis refers to relative peakedness of a distribution.
+C. Incorrect. A negatively skewed distribution appears as if the left tail has been pulled away from the mean.
+Quantitative Methods
+= interpret and evaluate measures of skewness and kurtosis to address an investment problem`;
+  const solutions = parseSolutions(text);
+  assert.equal(solutions.length, 1);
+  assert.equal(solutions[0].answer, "A");
+  assert.match(solutions[0].explanation_en, /negatively skewed distribution appears/);
+});
+
 test("classifyByLos matches known keyword patterns", () => {
   assert.equal(classifyByLos("calculate and interpret major return measures and describe their appropriate uses"), "rates-returns");
   assert.equal(classifyByLos("calculate and interpret the present value (PV) of fixed-income and equity instruments"), "tvm");

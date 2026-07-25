@@ -78,7 +78,7 @@ window.TOPIC_QUESTIONS = [
     "explanation_zh": ""
   },
   {
-    "id": "imported-091",
+    "id": "imported-093",
     "stem_en": "In hypothesis testing, which of the following best describes a Type II error?",
     "choices_en": [
       "A. Rejecting a true null hypothesis.",

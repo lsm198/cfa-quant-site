@@ -50,5 +50,18 @@ window.TOPIC_QUESTIONS = [
     "explanation_en": "Correct because with n as the sample size, the Spearman rank correlation is given by:\nf= 1-—(6 ¥dZV(n(n* — 1))\" = 1 — 6(12)/(4(4¢ — 1) = 1-6/5 =—-1/5 = -0.2, where the sum of squared differences\nin ranks }d2 = (2-1) + (3-2)? + (4-3) + (1-4) =14+14+14+9= 12.",
     "los": "explain parametric and nonparametric tests of the hypothesis that the population correlation coefficient equals zero, and determine whether the hypothesis is rejected at a given level of significance",
     "explanation_zh": ""
+  },
+  {
+    "id": "imported-090",
+    "stem_en": "A nonparametric test is most appropriate when:",
+    "choices_en": [
+      "A. comparing differences between means.",
+      "B. data are given in ranks.",
+      "C. data meet distributional assumptions."
+    ],
+    "answer": "B",
+    "explanation_en": "Correct. A nonparametric test is used under three circumstances: 1) when the data do not meet distnbutional\nassumptions, 2) when the data are given in ranks, and 3) when the hypothesis does not concem a parameter.",
+    "los": "compare and contrast parametric and nonparametric tests, and describe situations where each ts the more appropriate type of test",
+    "explanation_zh": ""
   }
 ];

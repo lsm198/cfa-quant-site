@@ -91,7 +91,7 @@ window.TOPIC_QUESTIONS = [
     "explanation_zh": ""
   },
   {
-    "id": "imported-090",
+    "id": "imported-092",
     "stem_en": "Grouping all publicly traded US firms by sector and then randomly selecting  subsamples of firms from each sector according to the sector's proportion in the  total population is an example of:",
     "choices_en": [
       "A. cluster sampling.",

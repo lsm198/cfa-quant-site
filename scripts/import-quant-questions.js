@@ -54,6 +54,10 @@ const SUBJECT_LABELS = [
   "Equity Investments",
   "Derivatives",
   "Financial Statement Analysis",
+  // A few blocks print the specific reading title instead of the broad subject
+  // area (e.g. "Probability Trees and Conditional Expectations" instead of
+  // "Quantitative Methods") — these are the 11 Quant reading titles from js/nav-data.js.
+  ...TOPICS.map((t) => t.title_en),
 ];
 
 export function parseSolutions(rawText) {
@@ -98,7 +102,7 @@ export function parseSolutions(rawText) {
     // reference other options inline (e.g. "...synonymous with distracter B.\n")
     // which would otherwise be mistaken for the start of option B's own text.
     const lineAnchored = [...explanationSection.matchAll(/(?:^|\n)([ABC])\.\s(.+?)(?=\n[ABC]\.\s|$)/gs)];
-    let correctMatch = lineAnchored.find((m) => /^correct because/i.test(m[2].trim()));
+    let correctMatch = lineAnchored.find((m) => /^correct\b/i.test(m[2].trim()));
 
     if (!correctMatch) {
       // Fallback for the rare block that lost its line breaks entirely during
@@ -106,7 +110,7 @@ export function parseSolutions(rawText) {
       // This is less precise (the "distracter B" false-positive risk applies
       // here) but only ever used when the safer line-anchored pass finds nothing.
       const whitespaceAnchored = [...explanationSection.matchAll(/(?:^|\s)([ABC])\.\s(.+?)(?=\s[ABC]\.\s|$)/gs)];
-      correctMatch = whitespaceAnchored.find((m) => /^correct because/i.test(m[2].trim()));
+      correctMatch = whitespaceAnchored.find((m) => /^correct\b/i.test(m[2].trim()));
     }
 
     if (!correctMatch) {

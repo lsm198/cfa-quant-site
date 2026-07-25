@@ -193,5 +193,18 @@ window.TOPIC_QUESTIONS = [
     "explanation_en": "Correct because a return distribution with negative skew has frequent small gains and a few extreme losses.",
     "los": "interpret and evaluate measures of skewness and kurtosis to address an investment problem",
     "explanation_zh": ""
+  },
+  {
+    "id": "imported-089",
+    "stem_en": "A graphical depiction of a continuous distribution shows the left tail to be longer  than the right tail. The distribution is best described as having:",
+    "choices_en": [
+      "A. negative skewness.",
+      "B. leptokurtosis.",
+      "C. Positive skewness."
+    ],
+    "answer": "A",
+    "explanation_en": "Correct. A negatively skewed distnbution appears as if the left tail has been pulled away from the mean. The\naverage magnitude of negative deviations from the mean is larger than the average magnitude of positive\ndeviations.",
+    "los": "interpret and evaluate measures of skewness and kurtosis to address an investment problem",
+    "explanation_zh": ""
   }
 ];
