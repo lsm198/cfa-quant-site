@@ -182,3 +182,142 @@ body {
   border: 1px solid var(--card-border);
   border-radius: 6px;
 }
+
+/* Touch-friendly sizing */
+.flashcard-controls button,
+.calculator-form button,
+.quiz-choice {
+  min-height: 44px;
+  padding: 10px 16px;
+  font-size: 15px;
+}
+
+.flashcard {
+  min-height: 120px;
+  font-size: 17px;
+}
+
+.topic-nav a {
+  padding: 16px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* In-page jump navigation */
+.jump-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  background: var(--bg);
+  padding: 10px 0;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.jump-nav a {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 6px 12px;
+  white-space: nowrap;
+}
+
+.jump-nav a:hover,
+.jump-nav a:active {
+  border-color: var(--selected-border);
+  color: var(--selected-text);
+}
+
+/* Cross-topic connections */
+.connection-item {
+  margin-bottom: 12px;
+}
+
+.connection-item a {
+  color: var(--header-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.connection-item a:hover {
+  text-decoration: underline;
+}
+
+.connection-item p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--body-text);
+}
+
+/* Vocabulary example sentences */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 6px 4px;
+  vertical-align: top;
+}
+
+.vocab-example {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  padding-bottom: 12px;
+}
+
+/* Prev/next topic switcher */
+.topic-switcher {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--card-border);
+}
+
+.topic-switcher a {
+  color: var(--header-text);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.topic-switcher a:hover {
+  background: var(--selected-bg);
+}
+
+.topic-switcher a.disabled {
+  visibility: hidden;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 0 14px 60px;
+  }
+
+  .site-header {
+    padding: 14px 16px;
+  }
+
+  .topic-switcher {
+    font-size: 13px;
+  }
+
+  .topic-switcher a {
+    padding: 10px 8px;
+  }
+}
