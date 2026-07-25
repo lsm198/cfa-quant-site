@@ -25,6 +25,16 @@ window.TOPIC_META = {
       "term_en": "Roy's Safety-First Ratio",
       "explain_zh": "衡量组合期望收益超过最低可接受收益的幅度相对于波动的比值,数值越大代表跌破门槛的概率越小,是选择最优组合的依据。",
       "formula": "SFRatio = \\frac{E(R_p) - R_L}{\\sigma_p}"
+    },
+    {
+      "term_en": "Covariance (Joint Probability Function)",
+      "explain_zh": "两个随机变量协方差的定义式:把每一种联合结果发生的概率,乘以两个变量各自偏离期望值的乘积,再求和。是计算两资产组合方差中交叉项的基础。",
+      "formula": "Cov(R_i,R_j) = \\sum P(R_i,R_j)\\left[R_i - E(R_i)\\right]\\left[R_j - E(R_j)\\right]"
+    },
+    {
+      "term_en": "Correlation Coefficient",
+      "explain_zh": "把协方差除以两个变量各自的标准差之积,得到一个介于 -1 与 1 之间的标准化指标,用来衡量两资产收益共同变动的方向和强度。协方差不变时,任一变量标准差增大都会使相关系数减小。",
+      "formula": "\\rho(R_i,R_j) = \\frac{Cov(R_i,R_j)}{\\sigma(R_i)\\sigma(R_j)}"
     }
   ],
   "analogies_zh": [

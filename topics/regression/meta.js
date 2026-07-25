@@ -31,6 +31,21 @@ window.TOPIC_META = {
       "term_en": "Prediction Interval",
       "explain_zh": "给定一个新的自变量取值,对因变量给出的预测区间,考虑了预测本身的不确定性,比回归线的置信区间(confidence interval)更宽。",
       "formula": "\\hat{Y}_f \\pm (t_c \\times s_f)"
+    },
+    {
+      "term_en": "F-test for Overall Significance",
+      "explain_zh": "检验回归模型整体上是否显著,即自变量的系数是否显著不为0。简单线性回归中只有一个自变量,原假设为斜率等于0(H0: b1=0),备择假设为斜率不等于0(Ha: b1≠0);F统计量等于回归均方(MSR)除以残差均方(MSE)。",
+      "formula": "F = \\frac{MSR}{MSE} = \\frac{SSR/k}{SSE/(n-k-1)}"
+    },
+    {
+      "term_en": "Functional Forms: log-lin / lin-log / log-log",
+      "explain_zh": "当X与Y的关系不是线性时,可对变量取自然对数使其线性化再用OLS估计:log-lin模型只对Y取对数;lin-log模型只对X取对数;log-log模型对X、Y都取对数,常用于估计弹性系数。",
+      "formula": "\\ln(Y_i)=b_0+b_1X_i\\;(\\text{log-lin}),\\quad Y_i=b_0+b_1\\ln(X_i)\\;(\\text{lin-log}),\\quad \\ln(Y_i)=b_0+b_1\\ln(X_i)\\;(\\text{log-log})"
+    },
+    {
+      "term_en": "Assumptions of the Simple Linear Regression Model",
+      "explain_zh": "简单线性回归的关键假设:①X与Y线性相关;②残差期望值为0;③残差方差为常数,不随X变化(同方差性,homoskedasticity);④残差之间不相关且服从正态分布。可通过残差图判断:残差应随机散布、无规律。",
+      "formula": "\\varepsilon_i \\sim N(0, \\sigma^2)"
     }
   ],
   "analogies_zh": [

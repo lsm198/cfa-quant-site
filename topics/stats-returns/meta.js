@@ -38,6 +38,15 @@ window.TOPIC_META = {
       "term_en": "Target Downside Deviation",
       "explain_zh": "只对低于目标收益率 B 的观测值计算偏差平方并平均再开方,专门衡量「跌破目标」的风险(shortfall risk)。",
       "formula": "s_{target} = \\sqrt{\\frac{\\sum (X_i - B)^2}{n-1}}, \\quad X_i \\le B"
+    },
+    {
+      "term_en": "Quantile Location (Ly)",
+      "explain_zh": "在升序排列的样本中,用来定位第 y 百分位所在位置的公式;若 Ly 不是整数,则在其相邻两个观测值之间做线性插值求出该分位数的值。",
+      "formula": "L_y = (n+1)\\frac{y}{100}"
+    },
+    {
+      "term_en": "Trimmed Mean",
+      "explain_zh": "截尾均值:先剔除样本两端各一定比例(如各2.5%,共5%)的极端观测值,再对剩余数据求算术平均,以降低极端值对均值的干扰。与之相对的 winsorized mean(缩尾均值)不剔除极端值,而是把它们替换为对应临界值后再求均值。"
     }
   ],
   "analogies_zh": [

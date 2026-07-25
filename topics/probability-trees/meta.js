@@ -35,6 +35,10 @@ window.TOPIC_META = {
       "term_en": "Correlation Coefficient",
       "explain_zh": "把协方差按两个变量各自的波动幅度标准化(standardize),得到一个不受量纲影响、取值在[-1,1]之间的线性相关强度指标。",
       "formula": "\\rho(R_i, R_j) = \\frac{Cov(R_i, R_j)}{\\sigma(R_i)\\sigma(R_j)}"
+    },
+    {
+      "term_en": "Scatter Plot",
+      "explain_zh": "散点图:把两个数值变量的每对观测值画成坐标平面上的点,点的分布形态可以直观展示两者是否存在线性关系及相关系数的方向与强弱,是解读相关系数最常用的可视化工具。"
     }
   ],
   "analogies_zh": [

@@ -10,7 +10,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "C",
     "explanation_en": "Correct because a cryptocurrency, also known as a digital currency, operates as electronic currency and\nallows near-real-time transactions between parties without the need for an intermediary, such as a bank.",
     "los": "describe financial applications of distributed ledger technology",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】cryptocurrency。加密货币的核心特征是允许交易双方点对点(peer-to-peer)完成近乎实时的交易,不需要银行等中介机构参与确认,这正是分布式账本技术带来的优势之一。选项A错误,加密货币价格波动通常很大而非低波动;选项B错误,不少加密货币(如比特币)对发行总量设有明确上限,而非无限制发行。故正确答案为C。"
   },
   {
     "id": "imported-011",
@@ -23,7 +23,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "A",
     "explanation_en": "Correct because algorithmic trading requires access to low-latency networks, and with the wide-spread\nadoption of algorithmic trading, the need for low-latency networks has grown. Low-latency systems—systems\nthat operate on networks that communicate high volumes of data with minimal delay (latency)—are essential for\nautomated trading applications that make decisions based on real-time prices and market events. In contrast,\nhigh-latency systems do not require access to real-time data and calculations. High-frequency trading is a form\nof algorithmic trading that makes use of vast quantities of granular financial data (tick data, for example) to\nautomatically place trades when certain conditions are met. Trades are executed on ultra-high-speed, low-\nlatency networks in fractions of a second.",
     "los": "describe applications of Big Data and Data Science to investment management",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】algorithmic trading / high-frequency trading (HFT)。算法交易依靠计算机根据实时行情自动做出下单决策,尤其是高频交易需要在极短时间内响应市场事件,因此对低延迟网络(low-latency network)的需求随算法交易普及而不断增长,故A正确。选项B错误,算法交易的普及使交易场所更加分散而非集中;选项C错误,算法交易常把大额机构订单拆分成许多小单分批执行,平均单笔交易规模反而变小。"
   },
   {
     "id": "imported-012",
@@ -36,7 +36,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "C",
     "explanation_en": "Correct because an ML model that has been overfitted is not able to accurately predict outcomes using a\ndifferent dataset and may be too complex. Also, underfitted models will typically fail to fully discover patterns that\nunderlie the data and thus may not be able to accurately predict outcomes.",
     "los": "describe Big Data, artificial intelligence, and machine leaming",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】overfitting / underfitting。机器学习模型预测失效可能来自两种相反的原因:过拟合时模型过于复杂,把训练集里的噪音也当作规律学了进去,换一个新数据集就表现很差;欠拟合时模型过于简单,根本没能捕捉到数据中真正存在的规律,预测同样不准。两种情况都可能导致模型失效,所以正确答案是C,而非只强调其中一种。"
   },
   {
     "id": "imported-014",
@@ -49,7 +49,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "C",
     "explanation_en": "Correct because as the complexity and size of an investor's portfolio grows, robo-advisers may not be able to\nsufficiently address the particular preferences and needs of the investor. In the case of extremely affluent\ninvestors who may own a greater number of asset types—including altemative investments (e.g., venture\ncapital, private equity, hedge funds, and real estate)—in addition to global stocks and bonds and have greater\ndemands for customization, the need for a team of human advisers, each with particular areas of investment or\nwealth-management expertise, ts likely to endure.",
     "los": "describe Big Data, artificial intelligence, and machine leaming",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】robo-adviser。智能投顾擅长提供低成本、标准化的投资组合管理,但当客户资产规模大、持仓类型复杂(如包含私募股权、对冲基金、房地产等另类资产)、定制化需求高时,全自动化系统往往难以充分满足这些个性化需求,此时仍需要具备不同专长的真人顾问团队提供服务,故C正确。选项A、B(账户门槛低、股息再投资)其实是机器人投顾自身的优势,而非传统顾问相对机器人投顾的优势,故排除。"
   },
   {
     "id": "imported-022",
@@ -62,7 +62,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "C",
     "explanation_en": "Correct because in its broadest sense, the term hntech generally refers to technology-driven innovation\noccurring in the financial services industry. For the purposes of this reading, fintech refers to technological\ninnovation in the design and delivery of financial services and products. Note, however, that in common usage,\nfintech can also refer fo companies (often new, startup companies) involved in developing the new technologies\nand their applications, as well as the business sector that comprises such companies.",
     "los": "sa describe aspects of “fintech” that are directly relevant for the gathering and analyzing of financial data.",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】fintech。广义上,金融科技(fintech)指的是金融服务和产品在设计与交付方式上的技术驱动型创新,涵盖大数据、人工智能、区块链等技术在金融行业各环节的应用,故C正确。选项A把fintech等同于「金融行业产生的海量数据」,选项B把它等同于「算法交易」,两者都只是fintech的某种具体应用或伴生现象,不能代表其广义定义。"
   },
   {
     "id": "imported-029",
@@ -75,7 +75,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "C",
     "explanation_en": "Correct because NLP [natural language processing] may be used to monitor analyst commentary to aid\ninvestment decision making. Since analysts tend not to change their buy, hold, and sell recommendations for a\ncompany frequently, they may instead offer nuanced commentary without making a change in their investment\nrecommendation. NLP can, therefore, be used to detect, monitor, and tag shifts in sentiment, potentially ahead\nof an analyst's recommendation change.",
     "los": "describe applications of Big Data and Data Science to investment management",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】natural language processing (NLP)。分析师通常不会频繁更改买入/持有/卖出评级,而是先在评论文字中透露出情绪的细微变化。自然语言处理(NLP)技术可以对这些非结构化文本进行分析,提前识别、监测并标记出情绪转变,往往早于分析师正式调整评级,故C正确。选项A代币化(tokenization)用于区块链上的资产所有权表示,选项B数据整理(data curation)属于数据准备环节,均与情绪监测无关。"
   },
   {
     "id": "imported-077",
@@ -88,7 +88,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "A",
     "explanation_en": "Correct because tokenization is the process of representing ownership rights to physical assets on a blockchain\nor distributed ledger.",
     "los": "# describe financial applications of distributed ledger technology",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】tokenization。代币化(tokenization)是指将实物资产的所有权凭证以数字化形式记录在区块链或分布式账本上的过程,便于该所有权在链上被追踪、验证和转让,故A正确。选项B「首次代币发行(ICO)」是一种融资方式,选项C「共识机制」是节点间就账本状态达成一致的机制,二者都不是「表示资产所有权」这一过程本身。"
   },
   {
     "id": "imported-079",
@@ -101,6 +101,6 @@ window.TOPIC_QUESTIONS = [
     "answer": "C",
     "explanation_en": "Correct because through tokenization, the process of representing ownership rights to physical assets on a\nblockchain or distributed ledger, distributed ledger technology (DLT) has the potential to streamline this process\nby creating a single, digital record of ownership with which to verify ownership title and authenticity, including all\nhistorical activity.",
     "los": "ma describe financial applications of distributed ledger technology",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】distributed ledger technology (DLT),具体体现为 tokenization。分布式账本技术的重要金融应用之一是代币化:把实物资产的所有权记录在链上,形成单一、可验证、包含完整历史信息的数字所有权记录,从而简化所有权转让和验证流程,故C最准确。选项A错误,比特币采用的是无需许可的公开网络(permissionless network)而非许可制网络;选项B的表述并非DLT最典型、最准确的特征描述。"
   }
 ];

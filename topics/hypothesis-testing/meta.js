@@ -26,6 +26,11 @@ window.TOPIC_META = {
       "term_en": "Power of a Test",
       "explain_zh": "检验功效衡量正确识别出「零假设确实为假」这一情形的能力(ability),数值越高越好。",
       "formula": "\\text{Power} = 1 - P(\\text{Type II error})"
+    },
+    {
+      "term_en": "t-test for Mean Differences (Independent Samples, Equal Variances)",
+      "explain_zh": "检验两个独立、方差未知但假设相等的正态总体的均值之差,先用两组样本方差合并计算「联合方差」Sp²,再据此构造 t 统计量,自由度为两组样本量之和减二。",
+      "formula": "t = \\frac{(\\bar{X}_1 - \\bar{X}_2) - (\\mu_1 - \\mu_2)}{\\sqrt{\\dfrac{S_p^2}{n_1} + \\dfrac{S_p^2}{n_2}}}, \\quad S_p^2 = \\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}, \\quad df = n_1+n_2-2"
     }
   ],
   "analogies_zh": [

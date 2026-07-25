@@ -36,6 +36,11 @@ window.TOPIC_META = {
       "term_en": "Time-Weighted Rate of Return",
       "explain_zh": "把整个区间按每次现金流进出的时点切成几段,分别算每段的 HPR,再对所有段的 (1+HPR) 取几何平均(geometric mean)后减 1。",
       "formula": "TWRR = \\left[ \\prod_{i=1}^{n} (1 + HPR_i) \\right]^{1/n} - 1"
+    },
+    {
+      "term_en": "Arithmetic Mean, Geometric Mean, and Harmonic Mean",
+      "explain_zh": "同一组非负且不全相等的数据,三种均值的大小关系恒为:算术平均数 ≥ 几何平均数 ≥ 调和平均数,只有全部观测值相等时三者才相等。调和平均数最常见的应用是「定期定额投资」(cost averaging):每期投入固定金额买入份额时,平均每股成本等于各期价格的调和平均数。",
+      "formula": "AM = \\frac{1}{n}\\sum_{i=1}^{n} x_i \\;\\geq\\; GM = \\left(\\prod_{i=1}^{n} x_i\\right)^{1/n} \\;\\geq\\; HM = \\frac{n}{\\sum_{i=1}^{n} \\frac{1}{x_i}}"
     }
   ],
   "analogies_zh": [

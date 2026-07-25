@@ -10,7 +10,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "C",
     "explanation_en": "Correct because a holding period return is the return earned from holding an asset for a single specified period\nof time. This return can be generalized and shown as a mathematical expression in which P ts the price and | is\nthe income: R = (P; — Pg + D,Py) Thus, R = ($107 — $100 + $7)/$100 = $14/$100 = 14%.",
     "los": "Calculate and interpret major return measures and describe their appropriate uses",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】持有期收益率 Holding Period Return (HPR)。公式:R=(P1−P0+D1)/P0。本题 P0=100,P1=107(卖出价,股息已单独发放),D1=7,代入得 R=(107−100+7)/100=14/100=14%。选项 B(7%)只计入了价差,漏掉了股息 D1,是常见错误。答案 C。"
   },
   {
     "id": "imported-006",
@@ -23,7 +23,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "B",
     "explanation_en": "Correct because a general equation to annualize returns is given, where c ts the number of periods in a year.\nFor a quarter, c = 4 and for a month, ¢ = 12° Fennuar = (1 + periog)” — 1. That is, for 16 months, c= 12/16 = 0./5 and\nthe annualized return is (1 + 0.13100)? — 1 = 1.09672 — 1 = 0.09672 = 9.7%.",
     "los": "calculate and interpret major return measures and describe their appropriate uses",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】年化收益率 Annualized Return。16 个月对应的年化周期数 c=12/16=0.75,代入公式 R_annual=(1+R_period)^c−1=(1.131)^0.75−1。ln(1.131)≈0.1231,乘以0.75≈0.0923,e^0.0923≈1.0967,故年化收益率≈9.7%。答案 B。若误把 c 取成 16/12 会得到偏高的错误结果。"
   },
   {
     "id": "imported-008",
@@ -36,7 +36,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "A",
     "explanation_en": "Correct because a growth rate (g) is calculated as g = (FV yPvyu — 1, where FV ts the future value, PV is the\npresent value and N is the number of periods. Here, g = (1.5/1)\"* — 1 = 0.10668 = 10.7%.",
     "los": "calculate and interpret annualized retum measures and continuously compounded returns, and describe their appropriate uses",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】年化收益率 Annualized Return(复合年增长率 CAGR 是同一公式的应用)。g=(FV/PV)^(1/N)−1,这里 FV/PV=1.5,N=4,g=(1.5)^(1/4)−1。ln1.5≈0.4055,除以4≈0.1014,e^0.1014≈1.1067,g≈10.7%。答案 A。注意指数是 1/N 而非 N,是常见混淆点。"
   },
   {
     "id": "imported-009",
@@ -49,7 +49,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "A",
     "explanation_en": "Correct because a holding period return is the return earned from holding an asset for a single specified period\nof time. ... This return can be generalized and shown as a mathematical expression in which P is the pnce and /\nis the income: R = [(P, — P,) + /,|/Py. The subscript indicates the time of the price or income, (f= 0), is the\nbeginning of the period and (f= 1) is the end of the period. Hence, P,= Rx P) + P,—/, =—10.2% x $450 + $450\n— $2 = $402.1 = $402.",
     "los": "Calculate and interpret major return measures and describe their appropriate uses",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】持有期收益率 Holding Period Return (HPR)。由 R=(P1−P0+D1)/P0 反解 P1:P1=R×P0+P0−D1。代入 R=−10.2%,P0=450,D1=2:P1=−0.102×450+450−2=−45.9+450−2=402.1≈402。答案 A。"
   },
   {
     "id": "imported-010",
@@ -62,7 +62,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "C",
     "explanation_en": "Correct because all three securities have the same maturity and default risk so the investor is forgoing 2.2%\n(4.4% — 2.2%) by Investing in CD 1 rather than investing in CD 3.",
     "los": "interpret interest rates as required rates of retum, discount rates, or opportunity costs and explain an interest rate as the sum of a real nsk-free rate and premiums that compensate investors for bearing distinct types of risk",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】机会成本 Opportunity cost。三张定存到期日和违约风险相同,可直接比较利率高低。放弃收益更高的 CD3(4.4%)而买入 CD1(2.2%)的机会成本 = 4.4%−2.2%=2.2%。答案 C。选项 B(1.1%)是错误地取了利差的一半。"
   },
   {
     "id": "imported-025",
@@ -75,7 +75,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "C",
     "explanation_en": "Correct because interest rates can be considered opportunity costs. The real risk-free interest rate is the single-\nperiod interest rate for a completely risk-free secunty if no inflation were expected. In economic theory, the real\nrisk-free rate reflects the time preferences of individuals for current versus future real consumption. The sum of\nthe real risk-free interest rate and the inflation premium is the nominal nsk-free interest rate. Many countries\nhave governmental short-term debt whose interest rate can be considered to represent the nominal risk-free\ninterest rate in that country. The interest rate on a 90-day US Treasury bill (T-bill), for example, represents the\nnominal risk-free interest rate over that time horizon. Therefore, the opportunity cost of this investment is 1% +\n290 = 3%.",
     "los": "interpret interest rates as required rates of retum, discount rates, or opportunity costs and explain an interest rate as the sum of a real risk-free rate and premiums that compensate investors for bearing distinct types of risk",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】名义无风险利率 Nominal risk-free rate。名义无风险利率 = 实际无风险利率 + 通胀溢价 = 1%+2%=3%。若不投资该 T-bill,投资者放弃的正是这 3% 的无风险回报,所以机会成本为 3%。答案 C。"
   },
   {
     "id": "imported-026",
@@ -88,7 +88,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "C",
     "explanation_en": "Correct because it is the money-weighted return when the dividend ts not reinvested. Calculator solution: CFO =\n—100, CF1=9, CF2 = 100, compute IRR = 4.601% = 4.6%.",
     "los": "» compare the money-weighted and time-weighted rates of return and evaluate the performance of portfolios based on these measures",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】资金加权收益率 Money-Weighted Rate of Return。现金流:t=0 买入付出 −100;t=1 收到股息 +9(未再投资);t=2 卖出收到 +100。求使 −100+9/(1+r)+100/(1+r)^2=0 成立的 r 即 IRR。代入 r≈4.6% 验证:9/1.046+100/1.046^2≈8.61+91.40=100.0,现值和恰为0,故 MWRR≈4.6%。答案 C。"
   },
   {
     "id": "imported-037",
@@ -101,7 +101,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "B",
     "explanation_en": "Correct because the time-weighted rate of return measures the compound rate of growth of $71 initially\ninvested in the portfolio over a stated measurement period.... We find this time-weighted return by taking the\ngeometric mean of the two holding period returns. A holding period return is the return earned from holding an\nasset for a Single specified period of time. ... This return can be generalized and shown as a mathematical\nexpression in which P ts the price and / is the income: R = [(P; — Pp) + 4,)/P). The subscript indicates the time of\nthe price or income, (f= 0), ts the beginning of the period and (f= 1) Is the end of the period. Thus, the holding\nperiod return between time 0 and 71 is HPR, = [(110 — 100) + 101/100 = 0.2 = 20%, and the holding period return\nbetween time 1 and 2 is HPR2 = [(230 — 220) + O]/220 = 0.04545 = 4.5%, where 220 = 110 = 2 Is the price\n(value) of the two shares held by the investor at time 1. The time-weighted rate of return is then [(1 + HPR,) = (1\n+ HPR,)]®° — 1 = [(1 + 0.2) x (1 + 0.04545)]9° — 1 = 0.12006 = 12.0%.",
     "los": "calculate and interpret major return measures and describe their appropriate uses",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】时间加权收益率 Time-Weighted Rate of Return。分段计算 HPR:第一年,1股从100涨到110(第2股买入价即市价110)并收到股息10,HPR1=(110−100+10)/100=20%;第二年,持有2股共220元涨到230元卖出,无股息,HPR2=(230−220)/220≈4.545%。TWRR=[(1.20)×(1.04545)]^(1/2)−1=√1.25454−1≈12.0%。答案 B。"
   },
   {
     "id": "imported-039",
@@ -114,7 +114,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "B",
     "explanation_en": "Correct because the arithmetic mean of a given dataset with different observations ts higher than the harmonic\nand geometric means. Unless all the observations in a dataset have the same value, the harmonic mean is less\nthan the geometric mean, which, in tum, is less than the arithmetic mean.",
     "los": "Calculate and interpret different approaches to return measurement over time and describe their appropriate uses",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】算术平均数、几何平均数与调和平均数(Arithmetic / Geometric / Harmonic Mean,见 meta 概念卡)。对于一组不全相等的非负数据,恒有算术平均数 ≥ 几何平均数 ≥ 调和平均数,只有全部观测值相等时三者才相等。因此数值最大的是算术平均数。答案 B。"
   },
   {
     "id": "imported-054",
@@ -127,7 +127,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "B",
     "explanation_en": "Correct because the investor will be indifferent if the EAR for both term deposits is the same. Therefore, we\nneed to find the stated annual rate with continuous compounding that corresponds to the EAR of the quarterly\ncompounded term deposit. Calculations: EAR of Term Deposit 1 = (1 + 0.04/4)4 — 1 = 0.040604. Hence, EAR of\nTerm Deposit 2 = 0.040604 = e' — 1, leading to a stated annual rate for Term Deposit 2 of r= In(1.040604) =\n0.039801 = 3.98%.",
     "los": "Calculate and interpret annualized retum measures and continuously compounded returns, and describe their appropriate uses",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】连续复利收益率 continuously compounded return。先求定存1(季度复利4%)的实际年化收益率 EAR:(1+0.04/4)^4−1=1.01^4−1≈4.0604%。要使定存2(连续复利)与其无差异,需 e^r−1=4.0604%,即 r=ln(1.040604)≈3.98%。答案 B。"
   },
   {
     "id": "imported-055",
@@ -140,7 +140,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "A",
     "explanation_en": "Correct because the harmonic mean Is used fo determine the average price paid per share when using cost\naveraging:\nE\nWaT a = 1405.\nVat Mot A 7\nThe weighted mean formula could also be used, where the weights would be the proportion of the total number\nof shares purchased. However, in order fo use this method a fixed investment amount would need to be\ncreated.",
     "los": "calculate and interpret different approaches to return measurement over time and describe their appropriate uses",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】调和平均数用于定期定额投资 Harmonic Mean & cost averaging(见 meta 概念卡)。每期投入固定金额买入份额时,平均每股成本 = 各期价格的调和平均数 = n/Σ(1/Pi)。代入 3/(1/14+1/12+1/17)=3/(0.07143+0.08333+0.05882)=3/0.21359≈14.05。答案 A。若误用算术平均 (14+12+17)/3=14.33 会偏高(选项 B)。"
   },
   {
     "id": "imported-059",
@@ -153,7 +153,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "A",
     "explanation_en": "Correct because the money-weighted return and its calculation are similar to the internal rate of return and the\nyield to maturity. Just like the internal rate of retum, amounts invested are cash outflows from the investor's\nperspective and amounts returned or withdrawn by the investor, or the money that remains at the end of an\ninvestment cycle, is a cash inflow for the investor. For the stock investment this is: $20 = $3/(1 + f+ ($20 +\n$11 +2, yielding r= 10.24% = 10%. Calculator solution: CF, =—20-; CF, = 3; CF, = 21; IRR CPT = 10.24.",
     "los": "calculate and interpret major return measures and descnbe their appropriate uses",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】资金加权收益率 Money-Weighted Rate of Return。现金流:t=0 买入 −20;t=1 收股息 +3(未卖出、未再投资);t=2 收股息1元并卖出得20元,合计 +21。解 −20+3/(1+r)+21/(1+r)^2=0 得 IRR。代入 r=10.24% 验证:3/1.1024+21/1.1024^2≈2.72+17.28=20.0,恰好平衡,故 MWRR≈10%。答案 A。"
   },
   {
     "id": "imported-060",
@@ -166,7 +166,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "B",
     "explanation_en": "Correct because the money-weighted return is an accurate measure of what the investor actually earned on the\nmoney invested.",
     "los": "calculate and interpret major return measures and describe their appropriate uses",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】资金加权收益率 Money-Weighted Rate of Return (MWRR)。MWRR 本质是内部收益率 IRR,用投资者全部实际现金流计算,反映的是投资者自己实际赚了多少钱,而非基金经理的选股能力。答案 B。选项 A、C 描述的其实是时间加权收益率的特点。"
   },
   {
     "id": "imported-061",
@@ -179,7 +179,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "C",
     "explanation_en": "Correct because, if funds are added to a portfolio, the money-weighted rate of retum puts a greater weight on\nthe time period after the funds were added. (As a corollary, if funds are taken out of a portfolio, the money-\nweighted rate of return puts a greater weight on the time period before the funds were removed.) So, if a client\ngives an investment manager more funds to invest at an unfavorable time, the manager's money-weighted rate\nof return will tend to be depressed.",
     "los": "compare the money-weighted and time-weighted rates of return and evaluate the performance of portfolios based on these measures",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】资金加权收益率 Money-Weighted Rate of Return。MWRR 本质是 IRR,对现金流发生的时点很敏感:若在市场下跌前追加资金,下跌后那段时期在 IRR 计算中权重更大,会显著拉低资金加权收益率;而时间加权收益率不受资金进出时点影响。答案 C。"
   },
   {
     "id": "imported-069",
@@ -192,7 +192,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "C",
     "explanation_en": "Correct because the real risk-free rate reflects the time preferences of individuals for current versus future real\nconsumption.",
     "los": "interpret interest rates as required rates of retum, discount rates, or opportunity costs and explain an interest rate as the sum of a real risk-free rate and premiums that compensate investors for bearing distinct types of risk",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】名义无风险利率 Nominal risk-free rate 中的「实际无风险利率」(real risk-free rate)部分。实际无风险利率反映的是个人对「现在消费」与「未来消费」的时间偏好(time preference),是名义无风险利率(=实际无风险利率+通胀溢价)的基础组成部分。答案 C。"
   },
   {
     "id": "imported-074",
@@ -205,7 +205,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "C",
     "explanation_en": "Correct because the returns are compounded quarterly;\n4 4\n$0,006 1+ F | 三 97.455.\n4 4",
     "los": "calculate and interpret annualized retum measures and continuously compounded returns, and describe their appropriate uses",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】年化收益率 Annualized Return / 复利频率(compounding frequency)。第一年:FV1=90,000×(1+0.03/4)^4≈90,000×1.030339≈92,730.5;第二年在此基础上按5%季度复利:FV2=92,730.5×(1+0.05/4)^4≈92,730.5×1.050945≈97,454.7≈97,455。答案 C(选项中的“6”是货币符号 OCR 误识别,实际是约97,455)。"
   },
   {
     "id": "imported-078",
@@ -218,7 +218,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "A",
     "explanation_en": "Correct because using the equation PV = FWN IT + rimyNm\nwhere\nm= number of compounding periods per year\nfr, = quoted annual interest rate\nN = number of years\nwe compute PV = $10,000,000 x (1 + 0.05/2)-'?\"* = $4 767 426.85 = $4 767 427.\nIn applying the equation, we use the periodic rate (in this case, the semi-annual rate) and the appropriate\nnumber of penods with sem-annual compounding.\nAlternatrve solution using a financial calculator in END mode:\nN = 30; IY = 0.025: PMT = 0; FV = 10,000,000: CPT PV = $4 /67 426.852 = $4 767 427",
     "los": "calculate and interpret annualized retum measures and continuously compounded returns, and describe their appropriate uses",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】年化收益率 Annualized Return / 复利频率(compounding frequency)。15年、年利率5%、半年复利,共 N=15×2=30 期,每期利率 5%/2=2.5%。PV=FV×(1+r/m)^(−N)=10,000,000×(1.025)^(−30)≈10,000,000/2.0976≈$4,767,427。答案 A。也可用计算器:N=30,I/Y=2.5,PMT=0,FV=10,000,000,CPT PV。"
   },
   {
     "id": "imported-091",
@@ -231,6 +231,6 @@ window.TOPIC_QUESTIONS = [
     "answer": "A",
     "explanation_en": "Correct because the time-weighted rate of return is the preferred performance measure as it neutralizes the\neffect of cash withdrawals or additions to the portfolio, which are generally outside of the control of the portfolio\nmanager.",
     "los": "compare the money-weighted and time-weighted rates of return and evaluate the performance of portfolios based on these measures",
-    "explanation_zh": ""
+    "explanation_zh": "【知识点】时间加权收益率 Time-Weighted Rate of Return。当客户自己掌控资金进出的时点时,若用资金加权收益率评价基金经理,会把客户择时的影响也算进经理的业绩里,有失公平;时间加权收益率对各子期 HPR 取几何平均,天然剔除了资金进出时点的影响,是评价基金经理能力更合适的指标。答案 A。"
   }
 ];
