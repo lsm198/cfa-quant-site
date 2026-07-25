@@ -20,6 +20,21 @@
       <button type="submit">求解</button>
     </form>
     <p id="tvm-output" class="quiz-accuracy"></p>
+
+    <details class="card" open>
+      <summary class="section-label">怎么用真实的金融计算器(以 BA II Plus 为例)</summary>
+      <p>CFA 考试允许使用的计算器主要是 Texas Instruments BA II Plus(或 Plus Professional)。它有五个 TVM(货币时间价值)专用键:<strong>N</strong>(期数)、<strong>I/Y</strong>(每期利率,%)、<strong>PV</strong>(现值)、<strong>PMT</strong>(每期现金流)、<strong>FV</strong>(终值)。</p>
+      <p><strong>基本步骤:</strong></p>
+      <ol>
+        <li>按 [2ND] [CLR TVM] 清空上一题残留的数据——这是最常见的出错原因,几乎每道新题都要先清空</li>
+        <li>依次输入已知的四个值,每输入一个数字就按对应的键,比如按 30 再按 [N],按 2.5 再按 [I/Y]</li>
+        <li>没有现金流的项也要显式输入 0(比如没有年金支付,按 0 再按 [PMT]),否则会沿用上一题的旧值</li>
+        <li>按 [CPT],再按要求解的那个键(比如 [CPT] 然后 [PV]),读出结果</li>
+      </ol>
+      <p><strong>符号约定(最容易出错的地方):</strong>付出去的钱(买入、投入)输成负数,收到的钱(卖出、到期收回)输成正数。同一道题里 PV 和 FV 通常一正一负,如果两个都输成正数,计算器会报错或算出不合理的结果——本页的网页计算器也遵循同样的符号约定。</p>
+      <p><strong>期初年金(annuity due):</strong>计算器默认是 END 模式(现金流在每期末发生)。如果题目是期初年金,先按 [2ND] [BGN] [2ND] [SET] [2ND] [QUIT] 切换到 BGN 模式,算完记得切回 END 模式,否则会影响下一题的计算。</p>
+      <p><strong>举例(真题):</strong>养老金需要在 15 年后一次性支付 $10,000,000,年化利率 5%,按半年复利计息,今天需要存入多少?把「15 年、每年复利 2 次」换算成「30 期、每期利率 2.5%」:按 30 [N]、2.5 [I/Y]、0 [PMT]、10000000 [FV],再按 [CPT] [PV],结果是 −4,767,427(负号表示这是你今天需要付出的钱)。</p>
+    </details>
   </div>
   <script type="module">
     import { initTvmCalculator } from "../js/calculators/tvm-calculator.js";

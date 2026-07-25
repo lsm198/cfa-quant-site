@@ -6,9 +6,9 @@ window.TOPIC_META = {
   "exam_pattern_zh": "常考:①两资产组合方差/标准差计算,给权重(weight)、各自标准差、相关系数(或协方差),套公式;②不相关(uncorrelated)/完全相关等特殊情况下的组合标准差简化计算;③Roy's safety-first 准则:给几个组合的期望收益和标准差,算每个的 SFRatio=(E(Rp)−RL)/σp,选最大的那个作为最优组合(optimal portfolio),常见坑是「最低可接受收益 RL」要正确换算(比如从取款金额换算成收益率)。",
   "vocabulary": [
     { "term_en": "portfolio expected return", "meaning_zh": "组合期望收益率:各资产期望收益率按权重加权平均", "example_en": "A portfolio's expected return is the weighted average of the expected returns of the individual assets it holds." },
-    { "term_en": "portfolio variance / standard deviation", "meaning_zh": "组合方差/标准差:不是各资产方差的简单加权平均,必须计入两两之间的协方差项", "example_en": "An equally weighted portfolio consists of two securities, each with a standard deviation of 3%; if the two securities' returns are uncorrelated, the portfolio's standard deviation is closest to 2.1%." },
-    { "term_en": "shortfall risk", "meaning_zh": "跌破风险:组合收益跌破某个最低可接受水平的概率", "example_en": "Safety-first rules focus on shortfall risk, the risk that portfolio value will fall below some minimum acceptable level over some time horizon." },
-    { "term_en": "Roy's safety-first criterion", "meaning_zh": "罗伊安全首要准则:在若干组合中选择「跌破最低门槛收益概率最小」的那一个,等价于选 SFRatio 最大的组合", "example_en": "Roy's safety-first criterion evaluates only downside risk." },
+    { "term_en": "portfolio variance / standard deviation", "meaning_zh": "组合方差/标准差:不是各资产方差的简单加权平均,必须计入两两之间的协方差项", "example_en": "Unlike expected return, portfolio variance is not a simple weighted average of the individual assets' variances — it also depends on how the assets move together." },
+    { "term_en": "shortfall risk", "meaning_zh": "跌破风险:组合收益跌破某个最低可接受水平的概率", "example_en": "Safety-first rules focus on shortfall risk, the risk that portfolio value will fall below some minimum acceptable level over a given time horizon." },
+    { "term_en": "Roy's safety-first criterion", "meaning_zh": "罗伊安全首要准则:在若干组合中选择「跌破最低门槛收益概率最小」的那一个,等价于选 SFRatio 最大的组合", "example_en": "Roy's safety-first criterion identifies the portfolio that minimizes the probability of falling short of a minimum acceptable return." },
     { "term_en": "safety-first ratio (SFRatio)", "meaning_zh": "= (组合期望收益 − 最低可接受收益) / 组合标准差,用来比较不同组合的「安全边际」", "example_en": "The safety-first ratio equals the expected portfolio return minus the minimum acceptable return, divided by the portfolio's standard deviation." }
   ],
   "mnemonics": [

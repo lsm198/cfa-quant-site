@@ -87,6 +87,36 @@ body {
   text-transform: uppercase;
 }
 
+.card > summary.section-label {
+  cursor: pointer;
+  margin-bottom: 0;
+  padding: 4px 0;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.card > summary.section-label::-webkit-details-marker {
+  display: none;
+}
+
+.card > summary.section-label::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 11px;
+  transition: transform 0.15s;
+}
+
+.card[open] > summary.section-label::before {
+  transform: rotate(90deg);
+}
+
+.card[open] > summary.section-label {
+  margin-bottom: 6px;
+}
+
 .flashcard {
   background: #ffffff;
   border: 1px solid var(--card-border);

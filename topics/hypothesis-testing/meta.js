@@ -6,11 +6,11 @@ window.TOPIC_META = {
   "exam_pattern_zh": "常考:①根据题目里「怀疑/期望」的方向正确写出备择假设(alternative hypothesis, Ha,比如怀疑均值>0,备择假设就是 μ>0,零假设永远取等号那一边);②根据数据类型(配对/独立样本、方差已知/未知、方差是否相等)选对检验统计量(t/F/卡方 chi-square);③Type I/II 错误和检验功效(power of a test)的定义与相互关系——「power = 1 − P(Type II error)」「正确拒绝错误的零假设」这两句几乎是必考的定义题;④配对样本 t 检验的自由度(degrees of freedom)是 n−1(n 是「对」数,不是总观测数)。",
   "vocabulary": [
     { "term_en": "null hypothesis (H0)", "meaning_zh": "零假设:检验的对象,通常取等号,代表「无差异/现状」", "example_en": "We always conduct a test of the null hypothesis at the point of equality." },
-    { "term_en": "alternative hypothesis (Ha)", "meaning_zh": "备择假设:研究者真正怀疑/想证明的命题,和零假设互斥", "example_en": "To test whether a population's mean is greater than zero, the alternative hypothesis should be formulated as μ > 0." },
-    { "term_en": "Type I error", "meaning_zh": "第一类错误:零假设为真却被错误拒绝,犯错概率等于显著性水平 α", "example_en": "Rejecting a true null hypothesis is best described as a Type I error." },
-    { "term_en": "Type II error", "meaning_zh": "第二类错误:零假设为假却未被拒绝", "example_en": "Failure to reject a false null hypothesis is best described as a Type II error." },
-    { "term_en": "power of a test", "meaning_zh": "检验功效 = 1 − P(第二类错误) = 正确拒绝一个为假的零假设的概率", "example_en": "The probability of correctly rejecting a null hypothesis is best defined as the power of the test." },
-    { "term_en": "degrees of freedom", "meaning_zh": "自由度:配对 t 检验用 n−1(n 为配对个数),两独立样本 t 检验用 n1+n2−2", "example_en": "For 30 paired monthly return observations, the t-test for the mean difference has 29 degrees of freedom." }
+    { "term_en": "alternative hypothesis (Ha)", "meaning_zh": "备择假设:研究者真正怀疑/想证明的命题,和零假设互斥", "example_en": "The alternative hypothesis states the condition a researcher suspects or hopes to find support for, and it is the mirror image of the null hypothesis." },
+    { "term_en": "Type I error", "meaning_zh": "第一类错误:零假设为真却被错误拒绝,犯错概率等于显著性水平 α", "example_en": "A Type I error occurs when a researcher rejects a null hypothesis that is actually true." },
+    { "term_en": "Type II error", "meaning_zh": "第二类错误:零假设为假却未被拒绝", "example_en": "A Type II error occurs when a researcher fails to reject a null hypothesis that is actually false." },
+    { "term_en": "power of a test", "meaning_zh": "检验功效 = 1 − P(第二类错误) = 正确拒绝一个为假的零假设的概率", "example_en": "A more powerful test is better able to detect a real effect, because it is more likely to correctly reject a false null hypothesis." },
+    { "term_en": "degrees of freedom", "meaning_zh": "自由度:配对 t 检验用 n−1(n 为配对个数),两独立样本 t 检验用 n1+n2−2", "example_en": "For a paired-difference t-test, the degrees of freedom equal the number of paired observations minus one." }
   ],
   "mnemonics": [
     { "title_zh": "备择假设怎么写", "content_zh": "「怀疑/希望」的那句话就是备择假设 Ha,零假设 H0 永远是它的对立面并且取等号。比如怀疑「均值大于0」,Ha: μ>0,H0: μ≤0(检验时在等号 μ=0 处进行)。" },

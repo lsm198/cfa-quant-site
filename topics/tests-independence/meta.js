@@ -6,10 +6,10 @@ window.TOPIC_META = {
   "exam_pattern_zh": "常考:①判断某种场景该用参数还是非参数检验——三个触发条件「数据不满足分布假设/数据是排名形式/假设本身不涉及参数」要背熟,反过来「样本大、满足正态假设」就该用参数检验;②列联表卡方独立性检验的自由度(degrees of freedom)计算,df=(行数−1)×(列数−1),很容易漏减 1;③相关系数为 0 的参数检验,t 统计量公式要背;④Spearman 等级相关系数的计算,给排名算 d² 之和再代公式。",
   "vocabulary": [
     { "term_en": "parametric test", "meaning_zh": "参数检验:假设数据服从某个已知分布(通常是正态分布)的检验方法,如 t 检验", "example_en": "A parametric test assumes the sample is drawn from a population with a specific distribution, such as the normal distribution." },
-    { "term_en": "nonparametric test", "meaning_zh": "非参数检验:不依赖总体分布假设的检验方法,常用于数据是排名、有异常值、或假设与参数无关的场景", "example_en": "A nonparametric test is most appropriate when data are given in ranks." },
-    { "term_en": "test of independence", "meaning_zh": "独立性检验:检验两个类别变量是否相互独立,常用列联表配合卡方统计量", "example_en": "A test of independence is based on the data in a contingency table with 5 rows and 4 columns." },
+    { "term_en": "nonparametric test", "meaning_zh": "非参数检验:不依赖总体分布假设的检验方法,常用于数据是排名、有异常值、或假设与参数无关的场景", "example_en": "A nonparametric test is typically used when data are given as ranks, contain outliers, or do not meet the assumptions required for a parametric test." },
+    { "term_en": "test of independence", "meaning_zh": "独立性检验:检验两个类别变量是否相互独立,常用列联表配合卡方统计量", "example_en": "A test of independence uses data from a contingency table to determine whether two categorical variables are related." },
     { "term_en": "contingency table", "meaning_zh": "列联表:把两个类别变量的观测频数按行列交叉列出的表格", "example_en": "A contingency table cross-tabulates the observed frequencies of two categorical variables." },
-    { "term_en": "Spearman rank correlation coefficient", "meaning_zh": "斯皮尔曼等级相关系数:先把原始数据转换成排名,再计算排名之间的相关系数,不要求变量服从正态分布", "example_en": "The Spearman rank correlation coefficient between X and Y is closest to −0.2." }
+    { "term_en": "Spearman rank correlation coefficient", "meaning_zh": "斯皮尔曼等级相关系数:先把原始数据转换成排名,再计算排名之间的相关系数,不要求变量服从正态分布", "example_en": "The Spearman rank correlation coefficient is calculated from the ranks of the observations rather than their raw values." }
   ],
   "mnemonics": [
     { "title_zh": "非参数检验三大触发条件", "content_zh": "「不满足分布假设」「数据是排名」「假设本身不涉及参数」——占一条就该用非参数检验,三条一条都不占就乖乖用参数检验。" },

@@ -1,16 +1,22 @@
 import { TOPICS } from "./nav-data.js";
 
-function renderTextSection(container, id, label, text) {
+function makeCollapsibleCard(id, label, defaultOpen) {
+  const details = document.createElement("details");
+  details.className = "card";
+  details.id = id;
+  if (defaultOpen) details.open = true;
+  const summary = document.createElement("summary");
+  summary.className = "section-label";
+  summary.textContent = label;
+  details.appendChild(summary);
+  return details;
+}
+
+function renderTextSection(container, id, label, text, defaultOpen) {
   if (!text) return null;
-  const label_el = document.createElement("div");
-  label_el.className = "section-label";
-  label_el.textContent = label;
+  const card = makeCollapsibleCard(id, label, defaultOpen);
   const body = document.createElement("p");
   body.textContent = text;
-  const card = document.createElement("div");
-  card.className = "card";
-  card.id = id;
-  card.appendChild(label_el);
   card.appendChild(body);
   container.appendChild(card);
   return { id, label };
@@ -18,13 +24,7 @@ function renderTextSection(container, id, label, text) {
 
 function renderConcepts(container, concepts) {
   if (!concepts || concepts.length === 0) return null;
-  const label_el = document.createElement("div");
-  label_el.className = "section-label";
-  label_el.textContent = "详细讲解";
-  const card = document.createElement("div");
-  card.className = "card";
-  card.id = "section-concepts";
-  card.appendChild(label_el);
+  const card = makeCollapsibleCard("section-concepts", "详细讲解", false);
   for (const concept of concepts) {
     const block = document.createElement("div");
     const term = document.createElement("strong");
@@ -53,13 +53,7 @@ function renderConcepts(container, concepts) {
 
 function renderVocabulary(container, vocabulary) {
   if (!vocabulary || vocabulary.length === 0) return null;
-  const label_el = document.createElement("div");
-  label_el.className = "section-label";
-  label_el.textContent = "高频词汇";
-  const card = document.createElement("div");
-  card.className = "card";
-  card.id = "section-vocabulary";
-  card.appendChild(label_el);
+  const card = makeCollapsibleCard("section-vocabulary", "高频词汇", false);
   const table = document.createElement("table");
   for (const item of vocabulary) {
     const row = document.createElement("tr");
@@ -89,13 +83,7 @@ function renderVocabulary(container, vocabulary) {
 
 function renderMnemonics(container, mnemonics) {
   if (!mnemonics || mnemonics.length === 0) return null;
-  const label_el = document.createElement("div");
-  label_el.className = "section-label";
-  label_el.textContent = "记忆口诀";
-  const card = document.createElement("div");
-  card.className = "card";
-  card.id = "section-mnemonics";
-  card.appendChild(label_el);
+  const card = makeCollapsibleCard("section-mnemonics", "记忆口诀", false);
   for (const item of mnemonics) {
     const block = document.createElement("div");
     const title = document.createElement("strong");
@@ -112,13 +100,7 @@ function renderMnemonics(container, mnemonics) {
 
 function renderAnalogies(container, analogies) {
   if (!analogies || analogies.length === 0) return null;
-  const label_el = document.createElement("div");
-  label_el.className = "section-label";
-  label_el.textContent = "理解捷径";
-  const card = document.createElement("div");
-  card.className = "card";
-  card.id = "section-analogies";
-  card.appendChild(label_el);
+  const card = makeCollapsibleCard("section-analogies", "理解捷径", false);
   for (const item of analogies) {
     const block = document.createElement("div");
     const title = document.createElement("strong");
@@ -135,13 +117,7 @@ function renderAnalogies(container, analogies) {
 
 function renderConnections(container, connections) {
   if (!connections || connections.length === 0) return null;
-  const label_el = document.createElement("div");
-  label_el.className = "section-label";
-  label_el.textContent = "知识点联系";
-  const card = document.createElement("div");
-  card.className = "card";
-  card.id = "section-connections";
-  card.appendChild(label_el);
+  const card = makeCollapsibleCard("section-connections", "知识点联系", false);
   for (const item of connections) {
     const target = TOPICS.find((t) => t.id === item.topic_id);
     if (!target) continue;
@@ -168,6 +144,12 @@ function renderJumpNav(container, sections) {
     const link = document.createElement("a");
     link.href = `#${section.id}`;
     link.textContent = section.label;
+    link.addEventListener("click", () => {
+      const target = document.getElementById(section.id);
+      if (target && target.tagName === "DETAILS") {
+        target.open = true;
+      }
+    });
     nav.appendChild(link);
   }
   container.appendChild(nav);
@@ -219,13 +201,13 @@ export function renderTopicPage(container, meta, questions) {
   container.appendChild(jumpNavContainer);
 
   const sections = [];
-  sections.push(renderTextSection(container, "section-essence", "本质", meta.essence_zh));
+  sections.push(renderTextSection(container, "section-essence", "本质", meta.essence_zh, true));
   sections.push(renderConcepts(container, meta.concepts));
   sections.push(renderVocabulary(container, meta.vocabulary));
   sections.push(renderMnemonics(container, meta.mnemonics));
   sections.push(renderAnalogies(container, meta.analogies_zh));
   sections.push(renderConnections(container, meta.connections));
-  sections.push(renderTextSection(container, "section-exam-pattern", "考试怎么考", meta.exam_pattern_zh));
+  sections.push(renderTextSection(container, "section-exam-pattern", "考试怎么考", meta.exam_pattern_zh, false));
 
   const flashcardLabel = document.createElement("div");
   flashcardLabel.className = "section-label";

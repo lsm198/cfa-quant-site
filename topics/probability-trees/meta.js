@@ -5,11 +5,11 @@ window.TOPIC_META = {
   "essence_zh": "本质是把「分阶段发生的不确定性」(uncertainty)画成一棵树(tree diagram),再算每条路径的联合概率(joint probability)和条件期望(conditional expectation)——先发生场景 A,再在 A 的条件下发生结果 B,把「发生了 A 之后 B 的期望值是多少」这类问题结构化地算出来。这一节也顺带覆盖协方差(covariance)/相关系数(correlation coefficient),因为它们描述的同样是「两个随机变量之间」的联合关系,思路相通。",
   "exam_pattern_zh": "常考:①辨认适合用树状图(tree diagram)表示的问题(分阶段的场景+概率);②用条件概率算「条件期望」(比如「在有利场景下」的期望股息);③计算离散随机变量(discrete random variable)的期望值(expected value)/方差/标准差(给一张概率-结果对照表,直接套 E(X)=ΣP·X);④协方差/相关系数的计算和性质辨析——常见坑点是「相关系数只衡量线性关系(linear relationship)」「协方差不变时方差增大会让相关系数变小」这类概念题,以及给联合概率表算协方差。",
   "vocabulary": [
-    { "term_en": "tree diagram", "meaning_zh": "树状图:把分阶段发生的场景和对应概率画成树形结构,常用来算条件期望", "example_en": "An analyst estimates the probabilities of three possible economic scenarios and the probability of a stock having a positive or negative return in each scenario; these scenarios are best represented by a tree diagram." },
+    { "term_en": "tree diagram", "meaning_zh": "树状图:把分阶段发生的场景和对应概率画成树形结构,常用来算条件期望", "example_en": "A tree diagram organizes multi-stage scenarios and their branch probabilities so that joint outcomes can be calculated systematically." },
     { "term_en": "conditional expectation", "meaning_zh": "条件期望:在已知某个场景/事件发生的前提下,随机变量的期望值 E(X|S)", "example_en": "The expected value of a random variable X given that a particular scenario S has occurred is called the conditional expectation of X, denoted E(X | S)." },
     { "term_en": "joint probability", "meaning_zh": "联合概率:两个随机变量同时取某组特定值的概率", "example_en": "A joint probability function specifies the probability that two random variables simultaneously take specific values." },
-    { "term_en": "covariance", "meaning_zh": "协方差:衡量两个随机变量共同变化方向和程度的指标,可正可负,量纲是两个变量单位的乘积", "example_en": "If the covariance between two positively correlated random variables remains the same but the variance of both variables increases, the correlation between the two variables decreases." },
-    { "term_en": "correlation coefficient", "meaning_zh": "相关系数 = 协方差/(两者标准差乘积),取值[-1,1],只衡量线性关系强弱", "example_en": "The correlation coefficient indicates the strength of the linear relationship between two random variables." }
+    { "term_en": "covariance", "meaning_zh": "协方差:衡量两个随机变量共同变化方向和程度的指标,可正可负,量纲是两个变量单位的乘积", "example_en": "Covariance measures the extent to which two random variables move together, and its sign indicates the direction of that relationship." },
+    { "term_en": "correlation coefficient", "meaning_zh": "相关系数 = 协方差/(两者标准差乘积),取值[-1,1],只衡量线性关系强弱", "example_en": "Correlation standardizes covariance by the product of the two variables' standard deviations, which is why it always falls between -1 and 1." }
   ],
   "mnemonics": [
     { "title_zh": "条件期望三步走", "content_zh": "①确定条件场景 S 发生的概率;②列出 S 发生条件下各结果的条件概率;③用条件概率对结果加权求和,E(X|S)=ΣP(结果|S)×结果,不要和无条件的期望值 E(X) 混。" },
