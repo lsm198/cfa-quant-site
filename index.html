@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>CFA L1 数量方法</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="site-header">CFA L1 · 数量方法</div>
+  <div class="page">
+    <p id="storage-tools"></p>
+    <p><a href="calculators/tvm.html">TVM 计算器</a></p>
+    <ul class="topic-nav" id="topic-nav"></ul>
+  </div>
+  <script type="module">
+    import { TOPICS } from "./js/nav-data.js";
+    import { renderBackupControls } from "./js/app.js";
+
+    const nav = document.getElementById("topic-nav");
+    for (const topic of TOPICS) {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = `topics/${topic.id}/index.html`;
+      a.textContent = `${topic.title_zh} (${topic.title_en})`;
+      li.appendChild(a);
+      nav.appendChild(li);
+    }
+
+    renderBackupControls(document.getElementById("storage-tools"));
+  </script>
+</body>
+</html>

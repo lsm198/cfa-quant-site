@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>TVM 计算器 · CFA L1 数量方法</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="site-header"><a href="../index.html">&larr; CFA L1 · 数量方法</a></div>
+  <div class="page">
+    <h1>TVM 计算器</h1>
+    <p class="section-label">填其中任意四项,留空要求解的一项,点击"求解"</p>
+    <form class="calculator-form" id="tvm-form">
+      <label>N(期数) <input type="number" step="any" name="n" /></label>
+      <label>I/Y(每期利率,%) <input type="number" step="any" name="iPct" /></label>
+      <label>PV(现值) <input type="number" step="any" name="pv" /></label>
+      <label>PMT(每期现金流) <input type="number" step="any" name="pmt" /></label>
+      <label>FV(终值) <input type="number" step="any" name="fv" /></label>
+      <button type="submit">求解</button>
+    </form>
+    <p id="tvm-output" class="quiz-accuracy"></p>
+  </div>
+  <script type="module">
+    import { initTvmCalculator } from "../js/calculators/tvm-calculator.js";
+    initTvmCalculator(document.getElementById("tvm-form"), document.getElementById("tvm-output"));
+  </script>
+</body>
+</html>

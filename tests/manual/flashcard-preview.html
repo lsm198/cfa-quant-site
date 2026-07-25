@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>flashcard.js preview</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+  <div class="page" id="root"></div>
+  <script type="module">
+    import { renderFlashcards } from "../../js/flashcard.js";
+
+    const fixture = [
+      { front_en: "Holding Period Return (HPR)", back_zh: "R = (P1 - P0 + D) / P0" },
+      { front_en: "Money-weighted rate of return", back_zh: "内部收益率(IRR),让现金流现值之和为零的折现率" },
+      { front_en: "Time-weighted rate of return", back_zh: "几何平均每期收益率,不受资金进出时点影响" },
+    ];
+    renderFlashcards(document.getElementById("root"), fixture, "preview");
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>假设检验 · CFA L1 数量方法</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../lib/katex/katex.min.css" />
+  <script src="../../lib/katex/katex.min.js"></script>
+</head>
+<body>
+  <div class="site-header"><a href="../../index.html">&larr; CFA L1 · 数量方法</a></div>
+  <div class="page" id="topic-root"></div>
+  <script src="meta.js"></script>
+  <script src="questions.js"></script>
+  <script type="module">
+    import { renderTopicPage } from "../../js/topic-page.js";
+    import { renderFlashcards } from "../../js/flashcard.js";
+    import { renderQuiz } from "../../js/quiz.js";
+
+    const root = document.getElementById("topic-root");
+    const { flashcardContainer, quizContainer } = renderTopicPage(root, window.TOPIC_META, window.TOPIC_QUESTIONS);
+    renderFlashcards(flashcardContainer, window.TOPIC_META.flashcards, window.TOPIC_META.id);
+    renderQuiz(quizContainer, window.TOPIC_QUESTIONS, window.TOPIC_META.id);
+  </script>
+</body>
+</html>

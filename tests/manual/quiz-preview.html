@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>quiz.js preview</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+  <div class="page" id="root"></div>
+  <script type="module">
+    import { renderQuiz } from "../../js/quiz.js";
+
+    const fixture = [
+      {
+        id: "preview-001",
+        stem_en: "An investor purchases a stock for $100. Immediately after receiving a dividend of $7, the investor sells the stock for $107. The holding period return of the investment is closest to:",
+        choices_en: ["A. 0%.", "B. 7%.", "C. 14%."],
+        answer: "C",
+        explanation_en: "Correct because R = (P1 - P0 + D) / P0 = (107 - 100 + 7) / 100 = 14%.",
+        explanation_zh: "持有期收益率 = (卖出价 - 买入价 + 股息) / 买入价 = 14%。",
+      },
+    ];
+    renderQuiz(document.getElementById("root"), fixture, "preview");
+  </script>
+</body>
+</html>
