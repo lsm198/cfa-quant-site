@@ -26,10 +26,16 @@ Each flashcard tracks a `stage` (index into the interval array, representing
 "how many consecutive successful reviews so far") and a `dueAt` timestamp
 (ms epoch).
 
-- **记住了 (remembered):** next due date = `now + intervals[stage] days`;
-  `stage += 1`. Once `stage` reaches the end of the interval array (i.e. the
-  30-day review was also successful), the card graduates: `mastered = true`,
-  `dueAt = null`, and it permanently drops out of the due queue.
+- **记住了 (remembered):** if `stage` is still within the interval array
+  (`stage < intervals.length`), the next due date = `now + intervals[stage]
+  days` and `stage += 1`. If `stage` has already reached the end of the
+  interval array (i.e. this review comes after the 30-day wait was already
+  scheduled and has now also been answered correctly), the card graduates
+  instead: `mastered = true`, `dueAt = null`, and it permanently drops out
+  of the due queue. This means graduating takes 7 total successful reviews
+  (one at each of the 6 intervals, then one final confirming review after
+  the last 30-day wait) — the 30-day interval is actually waited out, not
+  skipped.
 - **还不熟 (don't know it):** `stage = 0`, `dueAt = now` — the card is due
   again immediately, so it resurfaces in the same or next review session
   instead of waiting a day.
