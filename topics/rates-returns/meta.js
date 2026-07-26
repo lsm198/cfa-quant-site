@@ -10,7 +10,8 @@ window.TOPIC_META = {
     { "term_en": "time-weighted rate of return (TWRR)", "meaning_zh": "时间加权收益率:把整个持有期拆成多段,对每段的 HPR 取几何平均,不受资金进出时点影响,是评价基金经理业绩的标准指标", "example_en": "The time-weighted rate of return breaks the measurement period into sub-periods and geometrically links each sub-period's holding period return." },
     { "term_en": "opportunity cost", "meaning_zh": "机会成本:选择当前这个投资而放弃的、原本能从次优选项中获得的收益", "example_en": "An opportunity cost arises whenever choosing one investment means giving up the return available from the next-best alternative." },
     { "term_en": "nominal risk-free rate", "meaning_zh": "名义无风险利率 = 实际无风险利率 + 通胀溢价", "example_en": "The nominal risk-free rate equals the real risk-free rate plus the inflation premium." },
-    { "term_en": "continuously compounded return", "meaning_zh": "连续复利收益率:复利频率趋于无穷时的收益率,常用 ln(1+HPR) 计算", "example_en": "A continuously compounded return can be found by taking the natural logarithm of one plus the holding period return." }
+    { "term_en": "continuously compounded return", "meaning_zh": "连续复利收益率:复利频率趋于无穷时的收益率,常用 ln(1+HPR) 计算", "example_en": "A continuously compounded return can be found by taking the natural logarithm of one plus the holding period return." },
+    { "term_en": "real risk-free rate", "meaning_zh": "实际无风险利率:反映的是个人对「现在消费」与「未来消费」的时间偏好(time preference),是名义无风险利率(=实际无风险利率+通胀溢价)的基础组成部分", "example_en": "The real risk-free rate reflects the time preferences of individuals for current versus future real consumption." }
   ],
   "mnemonics": [
     { "title_zh": "两个「加权」怎么分", "content_zh": "资金加权(money-weighted)= 钱说了算,谁存取钱的时点影响大就用它,本质是 IRR;时间加权(time-weighted)= 时间说了算,把每一段时间的收益率几何平均,和资金进出无关,专门用来给基金经理「打分」,排除客户自己进出资金的干扰。" },
@@ -41,6 +42,11 @@ window.TOPIC_META = {
       "term_en": "Arithmetic Mean, Geometric Mean, and Harmonic Mean",
       "explain_zh": "同一组非负且不全相等的数据,三种均值的大小关系恒为:算术平均数 ≥ 几何平均数 ≥ 调和平均数,只有全部观测值相等时三者才相等。调和平均数最常见的应用是「定期定额投资」(cost averaging):每期投入固定金额买入份额时,平均每股成本等于各期价格的调和平均数。",
       "formula": "AM = \\frac{1}{n}\\sum_{i=1}^{n} x_i \\;\\geq\\; GM = \\left(\\prod_{i=1}^{n} x_i\\right)^{1/n} \\;\\geq\\; HM = \\frac{n}{\\sum_{i=1}^{n} \\frac{1}{x_i}}"
+    },
+    {
+      "term_en": "Compounding Frequency",
+      "explain_zh": "复利频率 m 指名义年利率一年内计息的次数(如季度复利 m=4、半年复利 m=2)。计算终值/现值时,把年化利率除以 m 得到每期利率(如 5%/4、5%/2),把年数乘以 m 得到总期数,再用 (1+r/m) 的期数次方复利计算;现值则反过来用相同的每期利率和总期数折现。",
+      "formula": "FV = PV \\times \\left(1 + \\frac{r}{m}\\right)^{m \\times N}"
     }
   ],
   "analogies_zh": [
