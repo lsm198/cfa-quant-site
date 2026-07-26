@@ -12,7 +12,8 @@ window.TOPIC_META = {
     { "term_en": "target (downside) deviation", "meaning_zh": "目标(下行)半方差:只统计低于目标收益率的那些偏差,衡量「亏钱的风险」", "example_en": "The target downside deviation only includes squared deviations for returns that fall below a specified target return." },
     { "term_en": "coefficient of variation (CV)", "meaning_zh": "变异系数 = 标准差/均值,衡量「每赚一单位收益要承担多少风险」", "example_en": "Analysts use the coefficient of variation to compare the risk of different investments relative to their average return." },
     { "term_en": "skewness / kurtosis", "meaning_zh": "偏度(分布是否左右对称)/ 峰度(分布尾部相对正态分布是厚还是薄)", "example_en": "Skewness describes whether a distribution's tail is longer on one side, while kurtosis describes how fat or thin its tails are relative to a normal distribution." },
-    { "term_en": "lognormal distribution", "meaning_zh": "对数正态分布:取对数后服从正态分布的分布,右偏、以0为下界,常用来给股价建模", "example_en": "Continuously compounded returns are often assumed to be normally distributed, which implies that the corresponding future price is lognormally distributed." }
+    { "term_en": "lognormal distribution", "meaning_zh": "对数正态分布:取对数后服从正态分布的分布,右偏、以0为下界,常用来给股价建模", "example_en": "Continuously compounded returns are often assumed to be normally distributed, which implies that the corresponding future price is lognormally distributed." },
+    { "term_en": "median", "meaning_zh": "中位数:把数据从小到大排序后位于正中间的值。样本数为奇数时,中位数位于第 (n+1)/2 位;为偶数时,取中间两个数的均值。", "example_en": "The 50th percentile is the median, which is the average of the two middle items." }
   ],
   "mnemonics": [
     { "title_zh": "偏度决定三者顺序", "content_zh": "正偏(右偏,长尾在右):众数<中位数<均值,均值被极端大值拉高;负偏(左偏,长尾在左):反过来,均值<中位数<众数。口诀:「尾巴指向哪,均值就被拉向哪」。" },
@@ -47,6 +48,10 @@ window.TOPIC_META = {
     {
       "term_en": "Trimmed Mean",
       "explain_zh": "截尾均值:先剔除样本两端各一定比例(如各2.5%,共5%)的极端观测值,再对剩余数据求算术平均,以降低极端值对均值的干扰。与之相对的 winsorized mean(缩尾均值)不剔除极端值,而是把它们替换为对应临界值后再求均值。"
+    },
+    {
+      "term_en": "Skewness: Ordering, Economic Meaning, and Graphical Reading",
+      "explain_zh": "偏度(skewness)要从三个角度掌握:①集中趋势顺序——正偏(右偏,长尾在右)时众数<中位数<均值(少数极端大值把均值拉到最高);负偏(左偏,长尾在左)时均值<中位数<众数(少数极端负值把均值拖到最低)。②经济含义——均值为零的负偏分布代表「frequent small gains and a few extreme losses」(常见小赚、偶尔巨亏,极端亏损把均值拉向负方向)。③图形判断——看哪一侧尾巴更长:左尾比右尾长 → negative skewness;右尾比左尾长 → positive skewness;这与峰度(kurtosis,描述尾部厚薄而非左右不对称)是两个不同的概念,不要混淆。"
     }
   ],
   "analogies_zh": [
