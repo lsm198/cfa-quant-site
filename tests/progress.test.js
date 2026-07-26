@@ -6,6 +6,10 @@ import {
   serializeProgress,
   setFlashcardMastered,
   isFlashcardMastered,
+  EBBINGHAUS_INTERVALS_DAYS,
+  getFlashcardSchedule,
+  isFlashcardDue,
+  reviewFlashcard,
   recordAttempt,
   computeAccuracy,
   getIncorrectCount,
@@ -81,4 +85,100 @@ test("isCurrentlyWrong reflects only the latest attempt", () => {
   assert.equal(isCurrentlyWrong(state, "tvm-001"), true);
   state = recordAttempt(state, "tvm-001", true, 200);
   assert.equal(isCurrentlyWrong(state, "tvm-001"), false);
+});
+
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+test("getFlashcardSchedule defaults for an unseen flashcard", () => {
+  const state = createEmptyProgress();
+  assert.deepEqual(getFlashcardSchedule(state, "tvm-fc-0"), {
+    stage: 0,
+    dueAt: null,
+    mastered: false,
+  });
+});
+
+test("getFlashcardSchedule respects a legacy mastered:true entry with no schedule", () => {
+  let state = createEmptyProgress();
+  state = setFlashcardMastered(state, "tvm-fc-0", true);
+  assert.deepEqual(getFlashcardSchedule(state, "tvm-fc-0"), {
+    stage: 0,
+    dueAt: null,
+    mastered: true,
+  });
+});
+
+test("isFlashcardDue is true for an unseen flashcard", () => {
+  const state = createEmptyProgress();
+  assert.equal(isFlashcardDue(state, "tvm-fc-0", Date.now()), true);
+});
+
+test("isFlashcardDue is false for a mastered flashcard even with no schedule", () => {
+  let state = createEmptyProgress();
+  state = setFlashcardMastered(state, "tvm-fc-0", true);
+  assert.equal(isFlashcardDue(state, "tvm-fc-0", Date.now()), false);
+});
+
+test("isFlashcardDue compares dueAt against now", () => {
+  const now = 1000;
+  let state = createEmptyProgress();
+  state = reviewFlashcard(state, "tvm-fc-0", true, now);
+  assert.equal(isFlashcardDue(state, "tvm-fc-0", now), false);
+  assert.equal(
+    isFlashcardDue(state, "tvm-fc-0", now + EBBINGHAUS_INTERVALS_DAYS[0] * DAY_MS),
+    true
+  );
+});
+
+test("reviewFlashcard with remembered=false resets to stage 0, due now", () => {
+  const now = 5000;
+  let state = createEmptyProgress();
+  state = reviewFlashcard(state, "tvm-fc-0", true, now);
+  state = reviewFlashcard(state, "tvm-fc-0", false, now + 1);
+  assert.deepEqual(state.flashcards["tvm-fc-0"], {
+    mastered: false,
+    stage: 0,
+    dueAt: now + 1,
+  });
+});
+
+test("reviewFlashcard advances through all six intervals on repeated success", () => {
+  let state = createEmptyProgress();
+  let now = 0;
+  for (let i = 0; i < EBBINGHAUS_INTERVALS_DAYS.length; i++) {
+    state = reviewFlashcard(state, "tvm-fc-0", true, now);
+    assert.equal(state.flashcards["tvm-fc-0"].stage, i + 1);
+    assert.equal(
+      state.flashcards["tvm-fc-0"].dueAt,
+      now + EBBINGHAUS_INTERVALS_DAYS[i] * DAY_MS
+    );
+    assert.equal(state.flashcards["tvm-fc-0"].mastered, false);
+    now = state.flashcards["tvm-fc-0"].dueAt;
+  }
+});
+
+test("reviewFlashcard graduates on the 7th successful review, after the 30-day wait", () => {
+  let state = createEmptyProgress();
+  let now = 0;
+  for (let i = 0; i < EBBINGHAUS_INTERVALS_DAYS.length; i++) {
+    state = reviewFlashcard(state, "tvm-fc-0", true, now);
+    now = state.flashcards["tvm-fc-0"].dueAt;
+  }
+  state = reviewFlashcard(state, "tvm-fc-0", true, now);
+  assert.deepEqual(state.flashcards["tvm-fc-0"], {
+    mastered: true,
+    stage: EBBINGHAUS_INTERVALS_DAYS.length,
+    dueAt: null,
+  });
+});
+
+test("a graduated flashcard is never due again", () => {
+  let state = createEmptyProgress();
+  let now = 0;
+  for (let i = 0; i < EBBINGHAUS_INTERVALS_DAYS.length; i++) {
+    state = reviewFlashcard(state, "tvm-fc-0", true, now);
+    now = state.flashcards["tvm-fc-0"].dueAt;
+  }
+  state = reviewFlashcard(state, "tvm-fc-0", true, now);
+  assert.equal(isFlashcardDue(state, "tvm-fc-0", now + 1000 * DAY_MS), false);
 });
