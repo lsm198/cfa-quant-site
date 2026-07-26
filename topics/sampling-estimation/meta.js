@@ -11,7 +11,8 @@ window.TOPIC_META = {
     { "term_en": "convenience / judgmental sampling", "meaning_zh": "便利/判断抽样:非概率抽样,依据抽样者的方便程度或主观判断选样本,代表性差", "example_en": "Convenience and judgmental sampling rely on the ease of access to data or the sampler's own judgment rather than random selection." },
     { "term_en": "sampling error", "meaning_zh": "抽样误差:某个统计量的观测值和它想要估计的真实总体参数之间的差", "example_en": "Sampling error is the difference between the observed value of a statistic and the quantity it is intended to estimate." },
     { "term_en": "central limit theorem (CLT)", "meaning_zh": "中心极限定理:当样本量足够大时,不论总体分布形状如何,样本均值的抽样分布都近似服从正态分布", "example_en": "The central limit theorem describes how the sampling distribution of the mean approaches a normal shape as the sample size grows, regardless of the population's original distribution." },
-    { "term_en": "standard error of the sample mean", "meaning_zh": "样本均值的标准误 = 总体标准差 / √样本量,衡量样本均值本身的波动", "example_en": "The standard error of the sample mean equals the population standard deviation divided by the square root of the sample size." }
+    { "term_en": "standard error of the sample mean", "meaning_zh": "样本均值的标准误 = 总体标准差 / √样本量,衡量样本均值本身的波动", "example_en": "The standard error of the sample mean equals the population standard deviation divided by the square root of the sample size." },
+    { "term_en": "probability sampling vs. non-probability sampling", "meaning_zh": "概率抽样:总体中每个个体被抽中的概率相等,抽出的样本更可能代表总体;非概率抽样:依赖抽样者的主观判断或取样便利程度(如便利抽样、判断抽样),容易产生选择性偏差,代表性通常较差", "example_en": "Probability sampling gives every member of the population an equal chance of being selected, whereas non-probability sampling depends on factors other than probability considerations, such as a sampler's judgment or the convenience to access data." }
   ],
   "mnemonics": [
     { "title_zh": "五种抽样一句话区分", "content_zh": "简单随机=完全随机等概率;分层随机=先分组再按比例随机;整群=随机抽整个「群」;便利=图省事;判断=凭主观经验挑——只有前两种能保证严格的「每个体等概率被抽中」。" },
@@ -27,6 +28,11 @@ window.TOPIC_META = {
       "term_en": "Standard Error of the Sample Mean",
       "explain_zh": "样本均值这个统计量本身的标准差(standard deviation),随样本量增大而减小。",
       "formula": "\\sigma_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}}"
+    },
+    {
+      "term_en": "Binomial Distribution as the Population Distribution",
+      "explain_zh": "当总体本身服从二项分布(binomial distribution)时,均值为np、方差为np(1-p)(n为试验次数,p为单次成功概率),总体分布本身可能是偏态的。但只要总体均值和方差有限,根据中心极限定理,当样本量n足够大时,样本均值的抽样分布依然近似服从正态分布(对称分布),与原总体的分布形状无关。",
+      "formula": "\\mu = np,\\ \\sigma^2 = np(1-p)"
     }
   ],
   "analogies_zh": [
