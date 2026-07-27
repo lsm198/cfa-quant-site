@@ -47,6 +47,8 @@ window.TOPIC_META = {
     { "front_en": "Stratified random sampling", "back_zh": "先分层,再按各层占总体比例分别随机抽样" },
     { "front_en": "Cluster sampling", "back_zh": "把总体分成若干「迷你总体」式的群,随机抽整个群" },
     { "front_en": "Central Limit Theorem", "back_zh": "样本量足够大时,样本均值近似服从正态分布,是总体均值的一致估计量" },
-    { "front_en": "Confidence Interval formula", "back_zh": "点估计 ± 可靠性因子 × 标准误(抽样误差不在公式里)" }
+    { "front_en": "Confidence Interval formula", "back_zh": "点估计 ± 可靠性因子 × 标准误(抽样误差不在公式里)" },
+    { "front_en": "Convenience / judgmental sampling", "back_zh": "非概率抽样,依赖抽样者判断或取样便利性,代表性通常比概率抽样差" },
+    { "front_en": "Sampling error definition", "back_zh": "统计量的观测值与其所要估计的真实总体参数之间的差,不是置信区间公式的一项" }
   ]
 };

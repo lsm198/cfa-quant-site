@@ -61,6 +61,10 @@ window.TOPIC_META = {
     { "front_en": "SST = SSR + SSE", "back_zh": "总变异 = 回归解释的变异 + 残差变异" },
     { "front_en": "Standard Error of the Estimate", "back_zh": "SEE = √[SSE / (n−2)]" },
     { "front_en": "Prediction interval vs confidence interval", "back_zh": "预测区间比回归线的置信区间更宽,因为多了个体预测的不确定性" },
-    { "front_en": "log-lin / lin-log / log-log", "back_zh": "log-lin: 只有Y取对数;lin-log: 只有X取对数;log-log: X和Y都取对数" }
+    { "front_en": "log-lin / lin-log / log-log", "back_zh": "log-lin: 只有Y取对数;lin-log: 只有X取对数;log-log: X和Y都取对数" },
+    { "front_en": "F-test for overall significance", "back_zh": "简单线性回归中检验H0: b1=0 vs Ha: b1≠0,F=MSR/MSE" },
+    { "front_en": "Simple linear regression assumptions", "back_zh": "X与Y线性相关、残差期望为0、残差方差不变(同方差性)、残差不相关且服从正态分布;残差图应随机无规律" },
+    { "front_en": "Dependent vs independent variable", "back_zh": "被解释的变量(Y)=因变量/explained variable;用来解释Y的变量(X)=自变量/explanatory variable" },
+    { "front_en": "Prediction interval formula", "back_zh": "Ŷf=b0+b1Xf,预测区间=Ŷf±tc×sf;SEE越大,sf越大,区间越宽" }
   ]
 };
