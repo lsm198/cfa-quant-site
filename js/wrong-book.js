@@ -2,14 +2,7 @@ import { TOPICS } from "./nav-data.js";
 import { loadProgress } from "./app.js";
 import { isCurrentlyWrong, getIncorrectCount } from "./progress.js";
 import { renderQuiz } from "./quiz.js";
-
-async function loadTopicQuestions(topicId) {
-  const res = await fetch(`topics/${topicId}/questions.js`);
-  const code = await res.text();
-  const sandbox = {};
-  const fn = new Function("window", `${code}\nreturn window.TOPIC_QUESTIONS;`);
-  return fn(sandbox) || [];
-}
+import { loadTopicModule } from "./topic-loader.js";
 
 export async function renderWrongBook(container) {
   const heading = document.createElement("h1");
@@ -25,7 +18,7 @@ export async function renderWrongBook(container) {
   const groups = [];
 
   for (const topic of TOPICS) {
-    const questions = await loadTopicQuestions(topic.id);
+    const questions = (await loadTopicModule(topic.id, "questions.js", "TOPIC_QUESTIONS")) || [];
     const wrongQuestions = questions.filter((q) => isCurrentlyWrong(state, q.id));
     if (wrongQuestions.length > 0) {
       wrongQuestions.sort((a, b) => getIncorrectCount(state, b.id) - getIncorrectCount(state, a.id));
