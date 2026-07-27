@@ -73,7 +73,7 @@ test("countQuestionsForTerm returns 0 for a term shorter than 4 characters (guar
   const questions = [
     { id: "q1", explanation_zh: "【知识点】Simple Linear Regression Model。细节。答案 A。" },
   ];
-  assert.equal(countQuestionsForTerm(questions, "abc"), 0);
+  assert.equal(countQuestionsForTerm(questions, "lin"), 0);
 });
 
 function loadTopicModule(filePath, globalName) {
