@@ -5,7 +5,23 @@ export function extractKnowledgePointClause(explanationZh) {
 }
 
 function normalize(s) {
-  return s.toLowerCase().replace(/\s+/g, "");
+  return s
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .replace(/\s*([(),.;:])\s*/g, "$1")
+    .trim();
+}
+
+function isWordChar(c) {
+  return c !== undefined && c !== null && /[a-z0-9]/.test(c);
+}
+
+function containsWholeTerm(clause, term) {
+  const idx = clause.indexOf(term);
+  if (idx === -1) return false;
+  const before = idx > 0 ? clause[idx - 1] : undefined;
+  const after = idx + term.length < clause.length ? clause[idx + term.length] : undefined;
+  return !isWordChar(before) && !isWordChar(after);
 }
 
 export function countQuestionsForTerm(questions, termEn) {
@@ -14,7 +30,7 @@ export function countQuestionsForTerm(questions, termEn) {
   let count = 0;
   for (const q of questions) {
     const clause = extractKnowledgePointClause(q.explanation_zh);
-    if (clause && normalize(clause).includes(normTerm)) count++;
+    if (clause && containsWholeTerm(normalize(clause), normTerm)) count++;
   }
   return count;
 }

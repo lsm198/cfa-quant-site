@@ -71,9 +71,17 @@ test("countQuestionsForTerm does not count a question with an unrelated clause",
 
 test("countQuestionsForTerm returns 0 for a term shorter than 4 characters (guard test)", () => {
   const questions = [
-    { id: "q1", explanation_zh: "【知识点】Simple Linear Regression Model。细节。答案 A。" },
+    { id: "q1", explanation_zh: "【知识点】Interquartile Range (IQR)。细节。答案 A。" },
   ];
-  assert.equal(countQuestionsForTerm(questions, "lin"), 0);
+  assert.equal(countQuestionsForTerm(questions, "IQR"), 0);
+});
+
+test("countQuestionsForTerm does not match 'parametric test' inside 'nonparametric test'", () => {
+  const questions = [
+    { id: "q1", explanation_zh: "【知识点】nonparametric test(非参数检验)。细节。答案 A。" },
+  ];
+  assert.equal(countQuestionsForTerm(questions, "parametric test"), 0);
+  assert.equal(countQuestionsForTerm(questions, "nonparametric test"), 1);
 });
 
 function loadTopicModule(filePath, globalName) {
