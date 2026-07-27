@@ -1,4 +1,5 @@
 import { TOPICS } from "./nav-data.js";
+import { countQuestionsForTerm } from "./knowledge-points.js";
 
 function makeCollapsibleCard(id, label, defaultOpen) {
   const details = document.createElement("details");
@@ -22,7 +23,7 @@ function renderTextSection(container, id, label, text, defaultOpen) {
   return { id, label };
 }
 
-function renderConcepts(container, concepts) {
+function renderConcepts(container, concepts, questions) {
   if (!concepts || concepts.length === 0) return null;
   const card = makeCollapsibleCard("section-concepts", "详细讲解", false);
   for (const concept of concepts) {
@@ -30,6 +31,13 @@ function renderConcepts(container, concepts) {
     const term = document.createElement("strong");
     term.textContent = concept.term_en;
     block.appendChild(term);
+    const count = countQuestionsForTerm(questions, concept.term_en);
+    if (count > 0) {
+      const badge = document.createElement("span");
+      badge.className = "count-badge";
+      badge.textContent = `${count} 道题`;
+      block.appendChild(badge);
+    }
     if (concept.explain_zh) {
       const p = document.createElement("p");
       p.textContent = concept.explain_zh;
@@ -51,7 +59,7 @@ function renderConcepts(container, concepts) {
   return { id: "section-concepts", label: "详细讲解" };
 }
 
-function renderVocabulary(container, vocabulary) {
+function renderVocabulary(container, vocabulary, questions) {
   if (!vocabulary || vocabulary.length === 0) return null;
   const card = makeCollapsibleCard("section-vocabulary", "高频词汇", false);
   const table = document.createElement("table");
@@ -59,6 +67,13 @@ function renderVocabulary(container, vocabulary) {
     const row = document.createElement("tr");
     const termCell = document.createElement("td");
     termCell.textContent = item.term_en;
+    const count = countQuestionsForTerm(questions, item.term_en);
+    if (count > 0) {
+      const badge = document.createElement("span");
+      badge.className = "count-badge";
+      badge.textContent = `${count} 道题`;
+      termCell.appendChild(badge);
+    }
     const meaningCell = document.createElement("td");
     meaningCell.textContent = item.meaning_zh;
     row.appendChild(termCell);
@@ -202,8 +217,8 @@ export function renderTopicPage(container, meta, questions) {
 
   const sections = [];
   sections.push(renderTextSection(container, "section-essence", "本质", meta.essence_zh, true));
-  sections.push(renderConcepts(container, meta.concepts));
-  sections.push(renderVocabulary(container, meta.vocabulary));
+  sections.push(renderConcepts(container, meta.concepts, questions));
+  sections.push(renderVocabulary(container, meta.vocabulary, questions));
   sections.push(renderMnemonics(container, meta.mnemonics));
   sections.push(renderAnalogies(container, meta.analogies_zh));
   sections.push(renderConnections(container, meta.connections));
