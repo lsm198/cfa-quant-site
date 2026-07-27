@@ -111,6 +111,11 @@ export function getIncorrectCount(state, questionId) {
   return attempts.filter((a) => !a.correct).length;
 }
 
+export function getAttemptCount(state, questionId) {
+  const attempts = (state.questions[questionId] && state.questions[questionId].attempts) || [];
+  return attempts.length;
+}
+
 export function isCurrentlyWrong(state, questionId) {
   const attempts = (state.questions[questionId] && state.questions[questionId].attempts) || [];
   if (attempts.length === 0) return false;

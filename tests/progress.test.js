@@ -13,6 +13,7 @@ import {
   recordAttempt,
   computeAccuracy,
   getIncorrectCount,
+  getAttemptCount,
   isCurrentlyWrong,
 } from "../js/progress.js";
 
@@ -75,6 +76,28 @@ test("getIncorrectCount counts only incorrect attempts", () => {
   state = recordAttempt(state, "tvm-001", false, 100);
   state = recordAttempt(state, "tvm-001", true, 200);
   state = recordAttempt(state, "tvm-001", false, 300);
+  assert.equal(getIncorrectCount(state, "tvm-001"), 2);
+});
+
+test("getAttemptCount returns 0 for a question with no attempts", () => {
+  const state = createEmptyProgress();
+  assert.equal(getAttemptCount(state, "tvm-001"), 0);
+});
+
+test("getAttemptCount counts all attempts including both correct and incorrect", () => {
+  let state = createEmptyProgress();
+  state = recordAttempt(state, "tvm-001", false, 100);
+  state = recordAttempt(state, "tvm-001", true, 200);
+  state = recordAttempt(state, "tvm-001", false, 300);
+  assert.equal(getAttemptCount(state, "tvm-001"), 3);
+});
+
+test("getAttemptCount counts all attempts while getIncorrectCount counts only incorrect ones", () => {
+  let state = createEmptyProgress();
+  state = recordAttempt(state, "tvm-001", false, 100);
+  state = recordAttempt(state, "tvm-001", true, 200);
+  state = recordAttempt(state, "tvm-001", false, 300);
+  assert.equal(getAttemptCount(state, "tvm-001"), 3);
   assert.equal(getIncorrectCount(state, "tvm-001"), 2);
 });
 
