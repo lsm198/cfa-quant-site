@@ -114,7 +114,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "B",
     "explanation_en": "Correct because the arithmetic mean of a given dataset with different observations ts higher than the harmonic\nand geometric means. Unless all the observations in a dataset have the same value, the harmonic mean is less\nthan the geometric mean, which, in tum, is less than the arithmetic mean.",
     "los": "Calculate and interpret different approaches to return measurement over time and describe their appropriate uses",
-    "explanation_zh": "【知识点】算术平均数、几何平均数与调和平均数(Arithmetic / Geometric / Harmonic Mean,见 meta 概念卡)。对于一组不全相等的非负数据,恒有算术平均数 ≥ 几何平均数 ≥ 调和平均数,只有全部观测值相等时三者才相等。因此数值最大的是算术平均数。答案 B。"
+    "explanation_zh": "【知识点】算术平均数、几何平均数与调和平均数(Arithmetic Mean, Geometric Mean, and Harmonic Mean)。对于一组不全相等的非负数据,恒有算术平均数 ≥ 几何平均数 ≥ 调和平均数,只有全部观测值相等时三者才相等。因此数值最大的是算术平均数。答案 B。"
   },
   {
     "id": "imported-054",
@@ -140,7 +140,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "A",
     "explanation_en": "Correct because the harmonic mean Is used fo determine the average price paid per share when using cost\naveraging:\nE\nWaT a = 1405.\nVat Mot A 7\nThe weighted mean formula could also be used, where the weights would be the proportion of the total number\nof shares purchased. However, in order fo use this method a fixed investment amount would need to be\ncreated.",
     "los": "calculate and interpret different approaches to return measurement over time and describe their appropriate uses",
-    "explanation_zh": "【知识点】调和平均数用于定期定额投资 Harmonic Mean & cost averaging(见 meta 概念卡)。每期投入固定金额买入份额时,平均每股成本 = 各期价格的调和平均数 = n/Σ(1/Pi)。代入 3/(1/14+1/12+1/17)=3/(0.07143+0.08333+0.05882)=3/0.21359≈14.05。答案 A。若误用算术平均 (14+12+17)/3=14.33 会偏高(选项 B)。"
+    "explanation_zh": "【知识点】调和平均数用于定期定额投资,Arithmetic Mean, Geometric Mean, and Harmonic Mean。每期投入固定金额买入份额时,平均每股成本 = 各期价格的调和平均数 = n/Σ(1/Pi)。代入 3/(1/14+1/12+1/17)=3/(0.07143+0.08333+0.05882)=3/0.21359≈14.05。答案 A。若误用算术平均 (14+12+17)/3=14.33 会偏高(选项 B)。"
   },
   {
     "id": "imported-059",
