@@ -47,6 +47,9 @@ window.TOPIC_META = {
   "flashcards": [
     { "front_en": "Two-Asset Portfolio Variance", "back_zh": "σp² = w1²σ1² + w2²σ2² + 2w1w2Cov(R1,R2)" },
     { "front_en": "Safety-First Ratio (SFRatio)", "back_zh": "(E(Rp) − RL) / σp,选数值最大的组合" },
-    { "front_en": "Zero-correlation portfolio variance", "back_zh": "相关系数为0时,协方差项=0,σp² = w1²σ1² + w2²σ2²" }
+    { "front_en": "Zero-correlation portfolio variance", "back_zh": "相关系数为0时,协方差项=0,σp² = w1²σ1² + w2²σ2²" },
+    { "front_en": "Roy's safety-first criterion", "back_zh": "只关注下行风险(downside risk),不假设正态分布、不使用semideviation,聚焦跌破最低门槛收益的概率(shortfall risk)" },
+    { "front_en": "Correlation & variance relationship", "back_zh": "协方差不变时,任一变量方差(标准差)增大 ⟹ 相关系数减小" },
+    { "front_en": "Covariance via joint probability", "back_zh": "Cov(Ri,Rj)=ΣP(Ri,Rj)[Ri−E(Ri)][Rj−E(Rj)],对每种联合结果按概率加权求和" }
   ]
 };

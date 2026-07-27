@@ -32,6 +32,9 @@ window.TOPIC_META = {
     { "front_en": "Underfitting", "back_zh": "模型过于简单,没能学到数据里真正的规律" },
     { "front_en": "Tokenization", "back_zh": "把实物资产所有权用区块链/分布式账本记录和转让的过程" },
     { "front_en": "Cryptocurrency key feature", "back_zh": "允许点对点交易,不需要银行等中介机构" },
-    { "front_en": "Robo-adviser limitation", "back_zh": "面对复杂、高净值客户的定制化资产配置需求时,不如真人顾问团队" }
+    { "front_en": "Robo-adviser limitation", "back_zh": "面对复杂、高净值客户的定制化资产配置需求时,不如真人顾问团队" },
+    { "front_en": "Algorithmic trading & HFT", "back_zh": "依赖低延迟网络(low-latency network)执行,常将大额机构订单拆分成多笔小单分散执行以降低单笔规模" },
+    { "front_en": "NLP in investment management", "back_zh": "用于监测分析师评论中的情绪变化,可能早于分析师正式调整买入/持有/卖出评级" },
+    { "front_en": "Fintech (broad definition)", "back_zh": "金融服务/产品在设计与交付方式上的技术驱动型创新,涵盖大数据、AI、区块链等应用" }
   ]
 };

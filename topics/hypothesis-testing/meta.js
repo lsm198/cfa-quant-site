@@ -46,6 +46,7 @@ window.TOPIC_META = {
     { "front_en": "Type I error", "back_zh": "拒绝了为真的 H0,概率 = 显著性水平 α" },
     { "front_en": "Type II error", "back_zh": "未拒绝为假的 H0" },
     { "front_en": "Power of a test", "back_zh": "1 − P(Type II error),正确拒绝假 H0 的概率" },
-    { "front_en": "Paired t-test degrees of freedom", "back_zh": "df = n − 1,n 是配对的对数,不是总观测数" }
+    { "front_en": "Paired t-test degrees of freedom", "back_zh": "df = n − 1,n 是配对的对数,不是总观测数" },
+    { "front_en": "Independent-samples t-test (equal variances)", "back_zh": "t=[(X̄1−X̄2)−(μ1−μ2)]/√(Sp²/n1+Sp²/n2), df=n1+n2−2;改变假设的均值差只影响t统计量,不影响df或联合方差Sp²" }
   ]
 };
