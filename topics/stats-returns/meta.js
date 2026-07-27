@@ -66,6 +66,13 @@ window.TOPIC_META = {
     { "front_en": "Positively skewed distribution order", "back_zh": "众数 < 中位数 < 均值(长尾在右,均值被拉高)" },
     { "front_en": "Negatively skewed distribution order", "back_zh": "均值 < 中位数 < 众数(长尾在左,均值被拉低)" },
     { "front_en": "Coefficient of Variation (CV)", "back_zh": "CV = 标准差 / 均值,风险/单位收益" },
-    { "front_en": "Normal return → future price distribution", "back_zh": "连续复利收益率服从正态分布 ⟹ 未来价格服从对数正态分布" }
+    { "front_en": "Normal return → future price distribution", "back_zh": "连续复利收益率服从正态分布 ⟹ 未来价格服从对数正态分布" },
+    { "front_en": "Interquartile Range (IQR)", "back_zh": "IQR=Q3−Q1,衡量中间50%数据的离散程度,不受极端值影响" },
+    { "front_en": "Quantile location formula", "back_zh": "Ly=(n+1)×(y/100);若不是整数,在相邻两观测值间线性插值" },
+    { "front_en": "Target downside deviation", "back_zh": "只对低于目标收益率B的观测值算偏差平方,分母仍用(n−1):√[Σ(Xi−B)²/(n−1)], Xi≤B" },
+    { "front_en": "Mean Absolute Deviation (MAD)", "back_zh": "MAD=Σ|Xi−X̄|/n;比标准差小(标准差因取平方而放大极端值的影响)" },
+    { "front_en": "Trimmed mean vs winsorized mean", "back_zh": "截尾均值:剔除两端极端值后取算术平均;缩尾均值:不剔除,而是替换为临界值再求均值" },
+    { "front_en": "Lognormal distribution properties", "back_zh": "以0为下界(不能为负)、右偏(非对称),且均值不等于对应正态分布的均值" },
+    { "front_en": "Skewness: tail & economic meaning", "back_zh": "左尾长=负偏,右尾长=正偏;均值为0的负偏分布代表「常见小赚、偶尔巨亏」" }
   ]
 };

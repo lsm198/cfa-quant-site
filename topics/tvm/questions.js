@@ -23,7 +23,7 @@ window.TOPIC_QUESTIONS = [
     "answer": "C",
     "explanation_en": "Correct because Option 3 (annuity due with 20 payments of $13,000 each) has the highest present value of the\nannuities and the $136,000 lump sum.\nCalculator solution for Option 2: End mode: N = 30; YY = 6: PMT =—12,000; compute PV = 135,093.\nCalculator solution for Option 3: Begin mode; N = 20: I/¥ = & PMT =-13,000; compute PV = 13/7, 84/7.",
     "los": "calculate and interpret the present value (PV) of fixed-income and equity instruments based on expected future cash flows",
-    "explanation_zh": "【知识点】期初年金(annuity due)及其现值调整公式(Annuity Due Adjustment)。比较三种现金流在8%折现率下的现值:方案一为已知现值$136,000;方案二是从t=1开始的30期普通年金,PV=12,000×[1-1.08^-30]/0.08≈$135,093;方案三是从t=0开始的20期期初年金,先算20期普通年金现值127,636(=13,000×[1-1.08^-20]/0.08),再乘以(1+r)得期初年金现值:127,636×1.08≈$137,847。三者比较方案三现值最高,故选C。期初年金比普通年金整体提前一期发生、多享受一期复利,这是其现值更高的根本原因。"
+    "explanation_zh": "【知识点】Present Value of an Ordinary Annuity + 期初年金(annuity due)现值调整公式(Annuity Due Adjustment)。比较三种现金流在8%折现率下的现值:方案一为已知现值$136,000;方案二是从t=1开始的30期普通年金,PV=12,000×[1-1.08^-30]/0.08≈$135,093;方案三是从t=0开始的20期期初年金,先算20期普通年金现值127,636(=13,000×[1-1.08^-20]/0.08),再乘以(1+r)得期初年金现值:127,636×1.08≈$137,847。三者比较方案三现值最高,故选C。期初年金比普通年金整体提前一期发生、多享受一期复利,这是其现值更高的根本原因。"
   },
   {
     "id": "imported-063",
