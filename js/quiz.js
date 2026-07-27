@@ -1,5 +1,5 @@
 import { loadProgress, saveProgress } from "./app.js";
-import { recordAttempt, computeAccuracy, getIncorrectCount, isCurrentlyWrong } from "./progress.js";
+import { recordAttempt, computeAccuracy, getIncorrectCount, isCurrentlyWrong, getAttemptCount } from "./progress.js";
 
 export function renderQuiz(container, questions, topicId) {
   if (!questions || questions.length === 0) {
@@ -49,6 +49,14 @@ export function renderQuiz(container, questions, topicId) {
       badge.className = "quiz-wrong-badge";
       badge.textContent = `已错 ${wrongCount} 次`;
       qEl.appendChild(badge);
+    }
+
+    const attemptCount = getAttemptCount(state, qId);
+    if (attemptCount > 0) {
+      const attemptBadge = document.createElement("span");
+      attemptBadge.className = "count-badge";
+      attemptBadge.textContent = `已做 ${attemptCount} 次`;
+      qEl.appendChild(attemptBadge);
     }
 
     const stem = document.createElement("p");

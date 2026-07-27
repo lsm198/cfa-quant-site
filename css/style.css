@@ -277,6 +277,18 @@ body {
   margin-bottom: 8px;
 }
 
+.count-badge {
+  display: inline-block;
+  background: var(--bg);
+  color: var(--muted);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  font-size: 12px;
+  padding: 2px 10px;
+  margin-bottom: 8px;
+  margin-right: 6px;
+}
+
 .wrong-book-group {
   margin-top: 28px;
 }
