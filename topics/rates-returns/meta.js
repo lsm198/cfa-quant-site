@@ -60,6 +60,11 @@ window.TOPIC_META = {
     { "front_en": "Holding Period Return (HPR)", "back_zh": "R = (P1 − P0 + D) / P0" },
     { "front_en": "Money-weighted vs Time-weighted", "back_zh": "资金加权 = IRR,受资金进出影响;时间加权 = 几何平均 HPR,不受资金进出影响,评价基金经理用这个" },
     { "front_en": "Nominal risk-free rate", "back_zh": "实际无风险利率 + 通胀溢价" },
-    { "front_en": "Annualizing a return", "back_zh": "(1+区间收益率)^(1/区间年数) − 1" }
+    { "front_en": "Annualizing a return", "back_zh": "(1+区间收益率)^(1/区间年数) − 1" },
+    { "front_en": "Opportunity cost", "back_zh": "放弃次优可比选项而损失的收益,如同等期限/风险的定存中利率差额" },
+    { "front_en": "Continuously compounded return", "back_zh": "r=ln(1+HPR);两种复利方式EAR相等时可互相换算,如e^r−1=EAR" },
+    { "front_en": "Real risk-free rate", "back_zh": "反映个人对现在消费与未来消费的时间偏好(time preference),是名义无风险利率的基础组成部分" },
+    { "front_en": "Arithmetic vs Geometric vs Harmonic Mean", "back_zh": "非负且不全相等的数据恒有:算术平均数≥几何平均数≥调和平均数;定期定额投资的平均成本用调和平均数" },
+    { "front_en": "Compounding frequency formula", "back_zh": "FV=PV×(1+r/m)^(m×N),m为每年复利次数,把年利率和年数换算成每期利率和总期数" }
   ]
 };

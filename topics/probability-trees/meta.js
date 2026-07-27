@@ -53,6 +53,9 @@ window.TOPIC_META = {
     { "front_en": "Expected value E(X)", "back_zh": "E(X) = Σ P(Xi) × Xi" },
     { "front_en": "Conditional expectation E(X|S)", "back_zh": "在场景 S 发生的条件下,对各结果按条件概率加权求和" },
     { "front_en": "Correlation Coefficient formula", "back_zh": "ρ = Cov(Ri,Rj) / [σ(Ri)×σ(Rj)],范围恒为 [-1,1]" },
-    { "front_en": "Covariance unchanged, variance ↑", "back_zh": "协方差不变时,任一变量方差增大 ⟹ 相关系数变小(分母变大)" }
+    { "front_en": "Covariance unchanged, variance ↑", "back_zh": "协方差不变时,任一变量方差增大 ⟹ 相关系数变小(分母变大)" },
+    { "front_en": "Variance of a discrete random variable", "back_zh": "σ²(X)=ΣP(Xi)[Xi−E(X)]²,先求期望值E(X)再算概率加权离差平方和" },
+    { "front_en": "Scatter plot use case", "back_zh": "展示两个数值变量联合分布最直觉的可视化工具,用于判断相关系数的方向与强弱" },
+    { "front_en": "Tree diagram use case", "back_zh": "适合展示分阶段、离散型不确定性场景(如多层情景+条件概率);区别于tree-map(层级占比图)和概率密度函数(连续变量)" }
   ]
 };
